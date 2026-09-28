@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1339548",
+    "title": "SALES at ROYAL FIRE SYSTEMS",
+    "coverUrl": null,
+    "chunkSnippet": "nswering queries offering advice and introducing new products. His/Her work includes:organising sales visits. demonstrating and presenting products.\",\"id\":\"1339548\",\"partner_type\":null,\"is_favourited\":false,\"location\":\"Adana, Reşatbey, Seyhan/Adana, Türkiye\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"SALES at ROYAL FIRE SYSTEMS\",\"branch\":{\"__ref\":\"Branch:413918\"},\"host_lc\":{\"__ref\":\"Office:941\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:2\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Organisation:412338\":{\"__typename\":\"Organisation\",\"id\":\"412338\",\"name\":\"Nestle Panama\",\"profile_photo({\\\"cdn_region\\\":\\\"Global\\\",\\\"size\\\":\\\"300x300\\\"})\":\"https://s3"
+  },
+  {
+    "id": "1355415",
+    "title": null,
+    "coverUrl": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/nd540nyozo5b7q1zr6een68v86y9",
+    "chunkSnippet": "i\"},\"Branch:413491\":{\"__typename\":\"Branch\",\"company\":{\"__ref\":\"Organisation:412338\"},\"id\":\"413491\"},\"AddressInfo:1355415\":{\"__typename\":\"AddressInfo\",\"id\":\"1355415\",\"country\":\"Panama\"},\"Office:2424\":{\"__typename\":\"Office\",\"id\":\"2424\",\"address_detail\":{\"__ref\":\"AddressInfo:1355415\"}},\"OpportunityDurationType:4\":{\"__typename\":\"OpportunityDurationType\",\"id\":\"4\",\"duration_type\":\"long\"},\"Opportunity:1339524\":{\"__typename\":\"Opportunity\",\"applicants_count\":4,\"cover_photo({\\\"cdn_region\\\":\\\"Global\\\",\\\"size\\\":\\\"552x312\\\"})\":{\"url\":\"https://s3.eu-west-1.amazonaws.com/gis-production-eu/nd540nyozo5b7q1zr6een68v86y9\",\"filename\":\"default-cover-photo.jpg\",\"is_default\":true},\"description\":\"Performs accounting operations (AO) activities within the scope of t"
+  },
+  {
+    "id": "1339524",
+    "title": "Accounting Specialist",
+    "coverUrl": null,
+    "chunkSnippet": "liance with the Accounting Policies and Processes of the Central America Region. Proposes change initiatives to ensure the efficiency of operations.\",\"id\":\"1339524\",\"partner_type\":null,\"is_favourited\":false,\"location\":\"Panamá, Provincia de Panamá, Panamá\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"Accounting Specialist\",\"branch\":{\"__ref\":\"Branch:413491\"},\"host_lc\":{\"__ref\":\"Office:2424\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:4\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Organisation:390656\":{\"__typename\":\"Organisation\",\"id\":\"390656\",\"name\":\"DataDrill\",\"profile_photo({\\\"cdn_region\\\":\\\"Global\\\",\\\"size\\\":\\\"300x300\\\"})\":\"https://cdn-expa.aiese"
+  },
+  {
+    "id": "1339521",
+    "title": "Marketing internship",
+    "coverUrl": null,
+    "chunkSnippet": "evelopment. The role combines research, content operations, social media, campaign support, visual asset preparation, analytics and carefully superv\",\"id\":\"1339521\",\"partner_type\":null,\"is_favourited\":false,\"location\":\"Novi Sad, Serbia\",\"project_name\":null,\"project_description\":null,\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"Marketing internship\",\"branch\":{\"__ref\":\"Branch:391861\"},\"host_lc\":{\"__ref\":\"Office:1279\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:2\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Organisation:373051\":{\"__typename\":\"Organisation\",\"id\":\"373051\",\"name\":\"Esenyel\\u0026Partners Lawyers/Consultants\",\"profile_photo({\\\"cdn_region\\\":\\\"Global\\\",\\\"size\\\":\\\"300x300\\\"})\":\"https:"
+  },
+  {
+    "id": "1339498",
+    "title": "Internatıonal Operations Specialist",
+    "coverUrl": null,
+    "chunkSnippet": "nge Participant Representative is responsible for assisting the organisation’s sales and growth efforts by contributing to new customer acquisition.\",\"id\":\"1339498\",\"partner_type\":null,\"is_favourited\":false,\"location\":\"İstanbul, Türkiye\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"Internatıonal Operations Specialist\",\"branch\":{\"__ref\":\"Branch:374190\"},\"host_lc\":{\"__ref\":\"Office:813\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:4\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Organisation:286836\":{\"__typename\":\"Organisation\",\"id\":\"286836\",\"name\":\"DHL Group\",\"profile_photo({\\\"cdn_region\\\":\\\"Global\\\",\\\"size\\\":\\\"300x300\\\"})\":\"https://s3.eu-west-1.amazon"
+  },
+  {
+    "id": "1339488",
+    "title": "[CC] UPGRADE Global Coordinator Talent Acquisition and Project Management (Only AIESECers. Fully read before applying)",
+    "coverUrl": null,
+    "chunkSnippet": "nths. While the anticipated duration is 12 months, any extension beyond the initial period is subject to mutual agreement and business requirements.\",\"id\":\"1339488\",\"partner_type\":\"global\",\"is_favourited\":false,\"location\":\"Charles-de-Gaulle-Straße 20, 53113 Bonn, Germany\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"[CC] UPGRADE Global Coordinator Talent Acquisition and Project Management (Only AIESECers. Fully read before applying)\",\"branch\":{\"__ref\":\"Branch:356952\"},\"host_lc\":{\"__ref\":\"Office:693\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:4\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Organisation:412680\":{\"__typename\":\"Organisation\",\"id\":\"412"
+  },
+  {
+    "id": "1339482",
+    "title": "International Recruiter for Physiotherapists",
+    "coverUrl": null,
+    "chunkSnippet": "involves maintaining personal contact with candidates and clients, providing tailored information and contributing to successful long-term matches.\n\",\"id\":\"1339482\",\"partner_type\":null,\"is_favourited\":false,\"location\":\"Groningen, Nederland\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"International Recruiter for Physiotherapists\",\"branch\":{\"__ref\":\"Branch:413841\"},\"host_lc\":{\"__ref\":\"Office:862\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:4\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Organisation:412716\":{\"__typename\":\"Organisation\",\"id\":\"412716\",\"name\":\"With Ease Education India Private Limited\",\"profile_photo({\\\"cdn_region\\\":\\\"Global\\\",\\\"size\\\""
+  },
+  {
+    "id": "1339471",
+    "title": "Admission Counsellor",
+    "coverUrl": null,
+    "chunkSnippet": "uiry details, follow-ups, applications, and conversion data using Excel/CRM, while coordinating with academic, administration, and marketing teams. \",\"id\":\"1339471\",\"partner_type\":null,\"is_favourited\":false,\"location\":\"Visakhapatnam, Andhra Pradesh, India\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"Admission Counsellor\",\"branch\":{\"__ref\":\"Branch:413879\"},\"host_lc\":{\"__ref\":\"Office:75\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:4\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Organisation:412745\":{\"__typename\":\"Organisation\",\"id\":\"412745\",\"name\":\"Candy Clan Studios\",\"profile_photo({\\\"cdn_region\\\":\\\"Global\\\",\\\"size\\\":\\\"300x300\\\"})\":\"https://s3.eu-w"
+  },
+  {
+    "id": "1339462",
+    "title": "Web Developer",
+    "coverUrl": null,
+    "chunkSnippet": "roubleshoot technical issues, optimize performance, and collaborate with designers and developers to deliver and maintain high-quality web projects.\",\"id\":\"1339462\",\"partner_type\":null,\"is_favourited\":false,\"location\":\"Cairo, Cairo Governorate, Egypt\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"Web Developer\",\"branch\":{\"__ref\":\"Branch:413908\"},\"host_lc\":{\"__ref\":\"Office:1789\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:2\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Opportunity:1339461\":{\"__typename\":\"Opportunity\",\"applicants_count\":0,\"cover_photo({\\\"cdn_region\\\":\\\"Global\\\",\\\"size\\\":\\\"552x312\\\"})\":{\"url\":\"https://s3.eu-west-1.amazonaws.com/gis-pro"
+  },
+  {
+    "id": "1339461",
+    "title": "Interior Designer",
+    "coverUrl": null,
+    "chunkSnippet": "nd 3D visualizations, select materials, furniture, colors, and finishes, and collaborate with architects and project teams to bring designs to life.\",\"id\":\"1339461\",\"partner_type\":null,\"is_favourited\":false,\"location\":\"Cairo, Cairo Governorate, Egypt\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"Interior Designer\",\"branch\":{\"__ref\":\"Branch:413908\"},\"host_lc\":{\"__ref\":\"Office:1789\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:2\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Opportunity:1339288\":{\"__typename\":\"Opportunity\",\"applicants_count\":73,\"cover_photo({\\\"cdn_region\\\":\\\"Global\\\",\\\"size\\\":\\\"552x312\\\"})\":{\"url\":\"https://s3.eu-west-1.amazonaws.com/gi"
+  },
+  {
+    "id": "1339288",
+    "title": "[CC] Change \\u0026 Transformation - Engagement Intern",
+    "coverUrl": null,
+    "chunkSnippet": "-west-1.amazonaws.com/gis-production-eu/aytto413s10c7nsegzyx9wt87qsc\",\"filename\":\"New POP BG_UPGRADE (2).png\",\"is_default\":false},\"description\":\"$21\",\"id\":\"1339288\",\"partner_type\":\"global\",\"is_favourited\":false,\"location\":\"Friedrich-Wilhelm-Straße 18, 53113 Bonn, Germany\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"[CC] Change \\u0026 Transformation - Engagement Intern\",\"branch\":{\"__ref\":\"Branch:356952\"},\"host_lc\":{\"__ref\":\"Office:693\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:4\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Opportunity:1339286\":{\"__typename\":\"Opportunity\",\"applicants_count\":79,\"cover_photo({\\\"cdn_region\\\":\\\"Global\\\",\\\"size\\\":\\\"55"
+  },
+  {
+    "id": "1339286",
+    "title": "[EXP] Global Internal Communications Intern",
+    "coverUrl": null,
+    "chunkSnippet": "nths. While the anticipated duration is 12 months, any extension beyond the initial period is subject to mutual agreement and business requirements.\",\"id\":\"1339286\",\"partner_type\":\"global\",\"is_favourited\":false,\"location\":\"Charles-de-Gaulle-Straße 20, 53113 Bonn, Germany\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"[EXP] Global Internal Communications Intern\",\"branch\":{\"__ref\":\"Branch:356952\"},\"host_lc\":{\"__ref\":\"Office:693\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:4\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Opportunity:1339283\":{\"__typename\":\"Opportunity\",\"applicants_count\":65,\"cover_photo({\\\"cdn_region\\\":\\\"Global\\\",\\\"size\\\":\\\"552x312\\\"})\""
+  },
+  {
+    "id": "1339283",
+    "title": "[EXP] Global Customs Services and Surcharges Specialist",
+    "coverUrl": null,
+    "chunkSnippet": "nths. While the anticipated duration is 12 months, any extension beyond the initial period is subject to mutual agreement and business requirements.\",\"id\":\"1339283\",\"partner_type\":\"global\",\"is_favourited\":false,\"location\":\"Charles-de-Gaulle-Straße 20, 53113 Bonn, Germany\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"[EXP] Global Customs Services and Surcharges Specialist\",\"branch\":{\"__ref\":\"Branch:356952\"},\"host_lc\":{\"__ref\":\"Office:693\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:4\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Organisation:236193\":{\"__typename\":\"Organisation\",\"id\":\"236193\",\"name\":\"Tata Consultancy Services Ltd.\",\"profile_photo({\\\""
+  },
+  {
+    "id": "1330678",
+    "title": "ACE Program | Global Coordinator (AIESECers Only) ",
+    "coverUrl": null,
+    "chunkSnippet": "anagement, talent development, and aligning international internship experiences with TCS’s broader HR, diversity, and employer branding strategies.\",\"id\":\"1330678\",\"partner_type\":\"global\",\"is_favourited\":false,\"location\":\"Hyderabad, Telangana, India\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"ACE Program | Global Coordinator (AIESECers Only) \",\"branch\":{\"__ref\":\"Branch:319796\"},\"host_lc\":{\"__ref\":\"Office:632\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:4\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Branch:319794\":{\"__typename\":\"Branch\",\"company\":{\"__ref\":\"Organisation:236193\"},\"id\":\"319794\"},\"AddressInfo:746\":{\"__typename\":\"AddressInfo\",\"id\":\"7"
+  },
+  {
+    "id": "1316550",
+    "title": "ACE Program | Voice Spanish Translator",
+    "coverUrl": null,
+    "chunkSnippet": "y. Added advantage with IT skill sets. Also need to work in few IT related activities and necessary knowledge transition will be provided for same. \",\"id\":\"1316550\",\"partner_type\":\"global\",\"is_favourited\":false,\"location\":\"Kolkata, West Bengal, India\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"ACE Program | Voice Spanish Translator\",\"branch\":{\"__ref\":\"Branch:319794\"},\"host_lc\":{\"__ref\":\"Office:631\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:4\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"Branch:319793\":{\"__typename\":\"Branch\",\"company\":{\"__ref\":\"Organisation:236193\"},\"id\":\"319793\"},\"AddressInfo:745\":{\"__typename\":\"AddressInfo\",\"id\":\"745\",\"country"
+  },
+  {
+    "id": "1305153",
+    "title": "ACE Program | Spanish Talent Acquisition Specialist",
+    "coverUrl": null,
+    "chunkSnippet": "apabilities of staffing requirements. Hence we need to hire a candidate who understands the role. The role is centered on Global Talent Acquisition.\",\"id\":\"1305153\",\"partner_type\":\"global\",\"is_favourited\":false,\"location\":\"Chennai, Tamil Nadu, India\",\"project_name\":\"\",\"project_description\":\"\",\"remote_opportunity\":\"false\",\"experience_type\":\"physical\",\"title\":\"ACE Program | Spanish Talent Acquisition Specialist\",\"branch\":{\"__ref\":\"Branch:319793\"},\"host_lc\":{\"__ref\":\"Office:630\"},\"opportunity_duration_type\":{\"__ref\":\"OpportunityDurationType:4\"},\"programme\":{\"__ref\":\"Programme:8\"},\"sdg_info\":null},\"ROOT_QUERY\":{\"__typename\":\"Query\",\"opportunities:{\\\"filters\\\":{\\\"earliest_start_date\\\":{\\\"from\\\":\\\"2026-09-24\\\"},\\\"programmes\\\":[8],\\\"q\\\":null,\\\"sor"
+  }
+]

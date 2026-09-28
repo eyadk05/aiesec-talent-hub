@@ -1,0 +1,4044 @@
+[
+  {
+    "id": "1339668",
+    "title": "Fingerprint [8 weeks]",
+    "status": "open",
+    "location": "Milano MI, Italia",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 2,
+    "available_openings": 2,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/mxmdepw3wr2v2lxypw0xg55vj1cz",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "930",
+      "name": "Milano",
+      "country": "Italy"
+    },
+    "skills": [
+      {
+        "id": "178325811",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178325812",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178325795",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178325796",
+        "constant_name": "English"
+      },
+      {
+        "id": "178325797",
+        "constant_name": "Spanish"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339666",
+    "title": "Skill Up! [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 2,
+    "available_openings": 2,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/gm9varvkd56m0v6cszglvn2kwilp",
+      "filename": "Robotics.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178325282",
+        "constant_name": "Artificial Intelligence"
+      },
+      {
+        "id": "178325283",
+        "constant_name": "Programming skills"
+      },
+      {
+        "id": "178325284",
+        "constant_name": "Algorithms"
+      },
+      {
+        "id": "178325285",
+        "constant_name": "Problem Solving"
+      },
+      {
+        "id": "178325286",
+        "constant_name": "Training"
+      },
+      {
+        "id": "178325287",
+        "constant_name": "Facilitation"
+      },
+      {
+        "id": "178325288",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178325277",
+        "constant_name": "Computer sciences"
+      },
+      {
+        "id": "178325278",
+        "constant_name": "Software development and programming"
+      },
+      {
+        "id": "178325279",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178325280",
+        "constant_name": "English"
+      },
+      {
+        "id": "178325281",
+        "constant_name": "French"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339665",
+    "title": "[Impact Brazil] - Research & Development Engineering Intern",
+    "status": "open",
+    "location": "Pouso Alegre, MG, 37550-000, Brasil",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 2,
+    "available_openings": 2,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/svbjcmdlc867uyasqdsp35bc58pt",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "8",
+      "short_name": "GT"
+    },
+    "host_lc": {
+      "id": "434",
+      "name": "Brazil Virtual Expansions",
+      "country": "Brazil"
+    },
+    "skills": [
+      {
+        "id": "178325684",
+        "constant_name": "Mechanical Process Engineering"
+      },
+      {
+        "id": "178325685",
+        "constant_name": "Technical Support"
+      },
+      {
+        "id": "178325686",
+        "constant_name": "Process Engineering"
+      },
+      {
+        "id": "178325687",
+        "constant_name": "Data Analysis"
+      },
+      {
+        "id": "178325688",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178325679",
+        "constant_name": "Electronics engineering"
+      },
+      {
+        "id": "178325680",
+        "constant_name": "Automotive engineering"
+      },
+      {
+        "id": "178325681",
+        "constant_name": "Mechanical engineering"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178325682",
+        "constant_name": "English"
+      },
+      {
+        "id": "178325683",
+        "constant_name": "Spanish"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "not_provided",
+      "accommodation_covered": "not_covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": 3250
+    }
+  },
+  {
+    "id": "1339663",
+    "title": "Scale Up! [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 5,
+    "available_openings": 5,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/qsefkz73mebrxuzssxjsxnuevbfr",
+      "filename": "Scale Up.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178325261",
+        "constant_name": "Financial management"
+      },
+      {
+        "id": "178325262",
+        "constant_name": "Data Management"
+      },
+      {
+        "id": "178325263",
+        "constant_name": "Data Analysis"
+      },
+      {
+        "id": "178325264",
+        "constant_name": "Organisational Management"
+      },
+      {
+        "id": "178325265",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178325256",
+        "constant_name": "Accounting"
+      },
+      {
+        "id": "178325257",
+        "constant_name": "Business administration"
+      },
+      {
+        "id": "178325258",
+        "constant_name": "Finance"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178325259",
+        "constant_name": "English"
+      },
+      {
+        "id": "178325260",
+        "constant_name": "French"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339661",
+    "title": "Global Classroom [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 6,
+    "available_openings": 6,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/j1znv3dtdxehzriymldx0kdxm9sh",
+      "filename": "teacher.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178324712",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178324713",
+        "constant_name": "Presentation skills"
+      },
+      {
+        "id": "178324714",
+        "constant_name": "Language Teaching"
+      },
+      {
+        "id": "178324715",
+        "constant_name": "Facilitation"
+      },
+      {
+        "id": "178324716",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178324699",
+        "constant_name": "Linguistics"
+      },
+      {
+        "id": "178324700",
+        "constant_name": "Languages"
+      },
+      {
+        "id": "178324701",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178324702",
+        "constant_name": "French"
+      },
+      {
+        "id": "178324703",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339659",
+    "title": "Global Classroom [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 3,
+    "available_openings": 3,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/12f31p83grjmp5ocech361h72b6x",
+      "filename": "teacher.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178324651",
+        "constant_name": "Language Teaching"
+      },
+      {
+        "id": "178324652",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178324653",
+        "constant_name": "Training"
+      },
+      {
+        "id": "178324654",
+        "constant_name": "Presentation skills"
+      },
+      {
+        "id": "178324655",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178324639",
+        "constant_name": "Languages"
+      },
+      {
+        "id": "178324640",
+        "constant_name": "Linguistics"
+      },
+      {
+        "id": "178324641",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178324642",
+        "constant_name": "Spanish"
+      },
+      {
+        "id": "178324643",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339658",
+    "title": "Global Classroom [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 3,
+    "available_openings": 3,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/i9jg6ivlmzqo3nuzg6coexmbzzl4",
+      "filename": "94a024e26b12f9a44f564ad789714252.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178324445",
+        "constant_name": "Language Teaching"
+      },
+      {
+        "id": "178324446",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178324447",
+        "constant_name": "Facilitation"
+      },
+      {
+        "id": "178324448",
+        "constant_name": "Presentation skills"
+      },
+      {
+        "id": "178324449",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178324439",
+        "constant_name": "Languages"
+      },
+      {
+        "id": "178324440",
+        "constant_name": "Linguistics"
+      },
+      {
+        "id": "178324441",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178324442",
+        "constant_name": "Italian"
+      },
+      {
+        "id": "178324443",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339657",
+    "title": "Global Classroom [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 3,
+    "available_openings": 3,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/cc2uewo8fj90bxtj5irxc7pv2zbl",
+      "filename": "GT.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178324477",
+        "constant_name": "Language Teaching"
+      },
+      {
+        "id": "178324478",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178324479",
+        "constant_name": "Training"
+      },
+      {
+        "id": "178324480",
+        "constant_name": "Facilitation"
+      },
+      {
+        "id": "178324481",
+        "constant_name": "Presentation skills"
+      },
+      {
+        "id": "178324482",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178324467",
+        "constant_name": "Languages"
+      },
+      {
+        "id": "178324468",
+        "constant_name": "Linguistics"
+      },
+      {
+        "id": "178324469",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178324470",
+        "constant_name": "German"
+      },
+      {
+        "id": "178324471",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339656",
+    "title": "Green Leaders [4 week]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 9,
+    "available_openings": 9,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/ubg9tt6avcqttqws0ywy9dxhu8hr",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178324152",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178324153",
+        "constant_name": "Community Development"
+      },
+      {
+        "id": "178324154",
+        "constant_name": "Ecology"
+      },
+      {
+        "id": "178324155",
+        "constant_name": "Critical Thinking"
+      },
+      {
+        "id": "178324156",
+        "constant_name": "Analytical thinking"
+      },
+      {
+        "id": "178324157",
+        "constant_name": "Waste & Water Management"
+      },
+      {
+        "id": "178324158",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178324147",
+        "constant_name": "Ecology"
+      },
+      {
+        "id": "178324148",
+        "constant_name": "Earth Sciences"
+      },
+      {
+        "id": "178324149",
+        "constant_name": "Sustainability"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178324150",
+        "constant_name": "French"
+      },
+      {
+        "id": "178324151",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339654",
+    "title": "Scale Up! [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 13,
+    "available_openings": 13,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/z7i7gaww7wdsqyuccopg3c2cgjzt",
+      "filename": "Scale Up.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178324060",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178324061",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178324062",
+        "constant_name": "Content Marketing"
+      },
+      {
+        "id": "178324063",
+        "constant_name": "Content Strategy"
+      },
+      {
+        "id": "178324064",
+        "constant_name": "Digital Marketing"
+      },
+      {
+        "id": "178324065",
+        "constant_name": "Social Media Management"
+      },
+      {
+        "id": "178324066",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178324055",
+        "constant_name": "Marketing"
+      },
+      {
+        "id": "178324056",
+        "constant_name": "Communication & journalism"
+      },
+      {
+        "id": "178324057",
+        "constant_name": "Public relations"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178324058",
+        "constant_name": "French"
+      },
+      {
+        "id": "178324059",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339647",
+    "title": "Fingerprint [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 13,
+    "available_openings": 13,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/c71sgbw4tduppsi40yrlqqmajsvu",
+      "filename": "Music.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178322888",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178322889",
+        "constant_name": "Facilitation"
+      },
+      {
+        "id": "178322890",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178322891",
+        "constant_name": "Training"
+      },
+      {
+        "id": "178322892",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178322883",
+        "constant_name": "Music"
+      },
+      {
+        "id": "178322884",
+        "constant_name": "Arts"
+      },
+      {
+        "id": "178322885",
+        "constant_name": "Theatre"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178322886",
+        "constant_name": "French"
+      },
+      {
+        "id": "178322887",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339642",
+    "title": "Fingerprint [4 weeks]",
+    "status": "open",
+    "location": "İzmit, Kocaeli, Türkiye",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 5,
+    "available_openings": 5,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/tla7cj8ompj0jfvac4lk3ak4vugw",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "1255",
+      "name": "KOCAELI",
+      "country": "Turkey"
+    },
+    "skills": [
+      {
+        "id": "178322142",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178322143",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178322144",
+        "constant_name": "Language Teaching"
+      },
+      {
+        "id": "178322145",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178322140",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178322141",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339640",
+    "title": "Heartbeat [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 13,
+    "available_openings": 13,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/xkxozng20mh1gf9y6nayoh5bigkd",
+      "filename": "PSY.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178322784",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178322785",
+        "constant_name": "Coaching"
+      },
+      {
+        "id": "178322786",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178322787",
+        "constant_name": "Empowerment of others"
+      },
+      {
+        "id": "178322788",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178322779",
+        "constant_name": "Psychology"
+      },
+      {
+        "id": "178322780",
+        "constant_name": "Education"
+      },
+      {
+        "id": "178322781",
+        "constant_name": "Social Work"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178322782",
+        "constant_name": "English"
+      },
+      {
+        "id": "178322783",
+        "constant_name": "French"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339639",
+    "title": "Global Classroom [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 14,
+    "available_openings": 14,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/pb6bnr0ur2gmmw5sdce6ubin5qb7",
+      "filename": "MATH.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178321914",
+        "constant_name": "Problem Solving"
+      },
+      {
+        "id": "178321915",
+        "constant_name": "Analytical thinking"
+      },
+      {
+        "id": "178321916",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178321917",
+        "constant_name": "Critical Thinking"
+      },
+      {
+        "id": "178321918",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178321909",
+        "constant_name": "Mathematics"
+      },
+      {
+        "id": "178321910",
+        "constant_name": "Education"
+      },
+      {
+        "id": "178321911",
+        "constant_name": "Statistics"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178321912",
+        "constant_name": "French"
+      },
+      {
+        "id": "178321913",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339638",
+    "title": "Explorer [4 weeks]",
+    "status": "open",
+    "location": "Ροβιές 340 05, Ελλάδα",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 3,
+    "available_openings": 3,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/so7mb2u2z717en749itrw4rockeo",
+      "filename": "Ανώνυμο σχέδιο (6).png",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "834",
+      "name": "ATHENS",
+      "country": "Greece"
+    },
+    "skills": [
+      {
+        "id": "178321716",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178321717",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178321718",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178321719",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178321713",
+        "constant_name": "Arts"
+      },
+      {
+        "id": "178321714",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178321715",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339633",
+    "title": "Aquatica [4 week]",
+    "status": "open",
+    "location": "Kubu, Kubu Raya Regency, West Kalimantan, Indonesia",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 3,
+    "available_openings": 3,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/kdd0tsfz52bhdzawmwwr0iy6x3l9",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "2093",
+      "name": "UNTAN",
+      "country": "Indonesia"
+    },
+    "skills": [
+      {
+        "id": "178320519",
+        "constant_name": "Community Development"
+      },
+      {
+        "id": "178320520",
+        "constant_name": "Ecology"
+      },
+      {
+        "id": "178320521",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178320511",
+        "constant_name": "Biology"
+      },
+      {
+        "id": "178320512",
+        "constant_name": "Social Work"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178320513",
+        "constant_name": "English"
+      },
+      {
+        "id": "178320514",
+        "constant_name": "Bahasa Indonesian"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339632",
+    "title": "Global Classroom [6 weeks]",
+    "status": "open",
+    "location": "Dong Nai City, Vietnam",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 12,
+    "available_openings": 10,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/ql27h4hz94nugj1u36evbcxxb4ht",
+      "filename": "TYA.png",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "259",
+      "name": "FHCMC",
+      "country": "Vietnam"
+    },
+    "skills": [
+      {
+        "id": "178320913",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178320914",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178320915",
+        "constant_name": "Technology of Building Materials"
+      },
+      {
+        "id": "178320916",
+        "constant_name": "Time Management"
+      },
+      {
+        "id": "178320917",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178320909",
+        "constant_name": "Marketing"
+      },
+      {
+        "id": "178320910",
+        "constant_name": "Languages"
+      },
+      {
+        "id": "178320911",
+        "constant_name": "Business administration"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178320912",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339619",
+    "title": "Eat 4 Change [6 weeks]",
+    "status": "open",
+    "location": "Nabeul‎, Tunisie",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 2,
+    "available_openings": 2,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/gc9l5zcs4cn2u2b4zntilzijzvrp",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "513",
+      "name": "NABEL",
+      "country": "Tunisia"
+    },
+    "skills": [
+      {
+        "id": "178315961",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178315962",
+        "constant_name": "Associate Degree"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178315957",
+        "constant_name": "Social Work"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178315958",
+        "constant_name": "Arabic"
+      },
+      {
+        "id": "178315959",
+        "constant_name": "English"
+      },
+      {
+        "id": "178315960",
+        "constant_name": "French"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339618",
+    "title": "Rooted [6 weeks]",
+    "status": "open",
+    "location": "Pontianak, West Kalimantan, Indonesia",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 20,
+    "available_openings": 20,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/gk29jsf77tq50q77fmcepryw909t",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "2093",
+      "name": "UNTAN",
+      "country": "Indonesia"
+    },
+    "skills": [
+      {
+        "id": "178315750",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178315751",
+        "constant_name": "Community Development"
+      },
+      {
+        "id": "178315752",
+        "constant_name": "Empowerment of others"
+      },
+      {
+        "id": "178315753",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178315745",
+        "constant_name": "Agriculture"
+      },
+      {
+        "id": "178315746",
+        "constant_name": "Ecology"
+      },
+      {
+        "id": "178315747",
+        "constant_name": "Environmental engineering"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178315748",
+        "constant_name": "English"
+      },
+      {
+        "id": "178315749",
+        "constant_name": "Bahasa Indonesian"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339610",
+    "title": "India is Feeling | 6 Weeks",
+    "status": "open",
+    "location": "Ranchi, Jharkhand, India",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 4,
+    "available_openings": 4,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/wucqz194ifvazktjo3t7tdi8x3qk",
+      "filename": "india_is_a_feeling_800x600.png",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "2340",
+      "name": "India National Office",
+      "country": null
+    },
+    "skills": [
+      {
+        "id": "178310162",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178310163",
+        "constant_name": "Collaboration"
+      },
+      {
+        "id": "178310164",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178310165",
+        "constant_name": "Community Development"
+      },
+      {
+        "id": "178310166",
+        "constant_name": "Content Marketing"
+      },
+      {
+        "id": "178310167",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178310168",
+        "constant_name": "Digital Marketing"
+      },
+      {
+        "id": "178310169",
+        "constant_name": "Event Planning"
+      },
+      {
+        "id": "178310170",
+        "constant_name": "Facilitation"
+      },
+      {
+        "id": "178310171",
+        "constant_name": "Filming"
+      },
+      {
+        "id": "178310172",
+        "constant_name": "Graphics and Design"
+      },
+      {
+        "id": "178310173",
+        "constant_name": "Presentation skills"
+      },
+      {
+        "id": "178310174",
+        "constant_name": "Research"
+      },
+      {
+        "id": "178310175",
+        "constant_name": "Social Media Management"
+      },
+      {
+        "id": "178310176",
+        "constant_name": "World citizenship"
+      },
+      {
+        "id": "178310177",
+        "constant_name": "Writing"
+      },
+      {
+        "id": "178310178",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178310160",
+        "constant_name": "Other"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178310161",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339608",
+    "title": "Scale Up! [4 weeks]",
+    "status": "open",
+    "location": "Cairo, Cairo Governorate, Egypt",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 1,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/ofvjb8siklg7fd0l9x8jatczj2c2",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "1789",
+      "name": "Ain Shams University",
+      "country": "Egypt"
+    },
+    "skills": [
+      {
+        "id": "178316778",
+        "constant_name": "Sales"
+      },
+      {
+        "id": "178316779",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178316775",
+        "constant_name": "Marketing"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178316776",
+        "constant_name": "Arabic"
+      },
+      {
+        "id": "178316777",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339607",
+    "title": "Global Classroom [4 weeks]",
+    "status": "open",
+    "location": "Belgrade, Serbia",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 1,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/d9o3c1swextmffs2ltled61ks3q6",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "191",
+      "name": "Metropolitan",
+      "country": "Serbia"
+    },
+    "skills": [
+      {
+        "id": "178308542",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178308543",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178308544",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178308545",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178308537",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178308538",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339605",
+    "title": "Global Classroom [4 weeks]",
+    "status": "open",
+    "location": "Belgrade, Serbia",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 1,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/jyuj2kd4e9bsv3pw7d94ypkmpzqn",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "191",
+      "name": "Metropolitan",
+      "country": "Serbia"
+    },
+    "skills": [
+      {
+        "id": "178308465",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178308466",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178308467",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178308460",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178308461",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339603",
+    "title": "Sales Representative",
+    "status": "open",
+    "location": "İzmir, Türkiye",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 1,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/z51uxzbch8sbhs95xphgkaufkyng",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "8",
+      "short_name": "GT"
+    },
+    "host_lc": {
+      "id": "796",
+      "name": "İZMİR",
+      "country": "Turkey"
+    },
+    "skills": [
+      {
+        "id": "178307793",
+        "constant_name": "Market Research"
+      },
+      {
+        "id": "178307794",
+        "constant_name": "Social Media Management"
+      },
+      {
+        "id": "178307795",
+        "constant_name": "Content Marketing"
+      },
+      {
+        "id": "178307796",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178307787",
+        "constant_name": "Business administration"
+      },
+      {
+        "id": "178307788",
+        "constant_name": "Marketing"
+      },
+      {
+        "id": "178307789",
+        "constant_name": "Communication & journalism"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178307790",
+        "constant_name": "English"
+      },
+      {
+        "id": "178307791",
+        "constant_name": "Arabic"
+      },
+      {
+        "id": "178307792",
+        "constant_name": "French"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "not_provided",
+      "accommodation_covered": "not_covered",
+      "food_provided": "provided",
+      "food_covered": "not_covered",
+      "computer_provided": "provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": 40000
+    }
+  },
+  {
+    "id": "1339602",
+    "title": "Fingerprint [6 weeks]",
+    "status": "open",
+    "location": "Brașov, România",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 1,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/3lt55yil995ydgxdwr9i1o07yxw8",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "1529",
+      "name": "BRASOV",
+      "country": "Romania"
+    },
+    "skills": [
+      {
+        "id": "178307591",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178307592",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178307593",
+        "constant_name": "Critical Thinking"
+      },
+      {
+        "id": "178307594",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178307595",
+        "constant_name": "Problem Solving"
+      },
+      {
+        "id": "178307596",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178307587",
+        "constant_name": "Education"
+      },
+      {
+        "id": "178307588",
+        "constant_name": "Psychology"
+      },
+      {
+        "id": "178307589",
+        "constant_name": "Social Work"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178307590",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339600",
+    "title": "Youth 4 Impact",
+    "status": "open",
+    "location": "525300 Întorsura Buzăului, România",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 2,
+    "available_openings": 2,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/8qapvvr6x7xs6zzl1v4qxhjmu761",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "1529",
+      "name": "BRASOV",
+      "country": "Romania"
+    },
+    "skills": [
+      {
+        "id": "178307400",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178307401",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178307402",
+        "constant_name": "Problem Solving"
+      },
+      {
+        "id": "178307403",
+        "constant_name": "Critical Thinking"
+      },
+      {
+        "id": "178307404",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178307405",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178307397",
+        "constant_name": "Education"
+      },
+      {
+        "id": "178307398",
+        "constant_name": "Ecology"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178307399",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339599",
+    "title": "Explorer [6 weeks]",
+    "status": "open",
+    "location": "417205 Copăcel, România",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 2,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/0l5ovegzt0buyx8knm33v523fu8l",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "1529",
+      "name": "BRASOV",
+      "country": "Romania"
+    },
+    "skills": [
+      {
+        "id": "178307176",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178307177",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178307178",
+        "constant_name": "Problem Solving"
+      },
+      {
+        "id": "178307179",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178307180",
+        "constant_name": "Ecology"
+      },
+      {
+        "id": "178307181",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178307172",
+        "constant_name": "Ecology"
+      },
+      {
+        "id": "178307173",
+        "constant_name": "Biology"
+      },
+      {
+        "id": "178307174",
+        "constant_name": "Geography"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178307175",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339597",
+    "title": "Fingerprint [6 weeks]",
+    "status": "open",
+    "location": "38068 Rovereto TN, Italia",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 2,
+    "available_openings": 2,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/tcq5biy8rg20ne148d7plfj1haav",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "1370",
+      "name": "Trento",
+      "country": "Italy"
+    },
+    "skills": [
+      {
+        "id": "178306253",
+        "constant_name": "Leadership"
+      },
+      {
+        "id": "178306254",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178306239",
+        "constant_name": "Nursing"
+      },
+      {
+        "id": "178306240",
+        "constant_name": "Arts"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178306241",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339591",
+    "title": "A Design Experience Through Japanese Architecture by　TERASU — Illuminating the Future of  International Students ",
+    "status": "open",
+    "location": "日本、兵庫県宝塚市",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 2,
+    "available_openings": 2,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/e973iiblqls8tkihkuuwo2qyywln",
+      "filename": "てらすさんロゴ.png",
+      "is_default": false
+    },
+    "programme": {
+      "id": "8",
+      "short_name": "GT"
+    },
+    "host_lc": {
+      "id": "1205",
+      "name": "KOBE UNIVERSITY",
+      "country": "Japan"
+    },
+    "skills": [
+      {
+        "id": "178305102",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178305099",
+        "constant_name": "Architecture"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178305100",
+        "constant_name": "Japanese"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": 0
+    }
+  },
+  {
+    "id": "1339588",
+    "title": "Fingerprint [6 weeks]",
+    "status": "open",
+    "location": "Belgrade, Serbia",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 2,
+    "available_openings": 2,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/alxlz1dnv6i7p8avwcdvvd7ywxlm",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "191",
+      "name": "Metropolitan",
+      "country": "Serbia"
+    },
+    "skills": [
+      {
+        "id": "178308357",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178308358",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178308359",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178308360",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178308352",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178308353",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339585",
+    "title": "Raise your Voice [6 weeks on Schools]",
+    "status": "open",
+    "location": "Curitiba, Paraná, Brazil",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 1,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/rpd7yw6xl5fi84s0qio118dmexog",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "988",
+      "name": "FLORIANÓPOLIS",
+      "country": "Brazil"
+    },
+    "skills": [
+      {
+        "id": "178302965",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178302966",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178302967",
+        "constant_name": "Collaboration"
+      },
+      {
+        "id": "178302968",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178302962",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178302963",
+        "constant_name": "Spanish"
+      },
+      {
+        "id": "178302964",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339583",
+    "title": "Skill Up! [4 weeks]",
+    "status": "open",
+    "location": "Meknes, Morocco",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 4,
+    "available_openings": 4,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/tdghdnlr2erjo4ogmn6052ot8jxy",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "2407",
+      "name": "Meknes",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178302390",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178302391",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178302392",
+        "constant_name": "Leadership"
+      },
+      {
+        "id": "178302393",
+        "constant_name": "Professional Skills"
+      },
+      {
+        "id": "178302394",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178302385",
+        "constant_name": "Food Engineering"
+      },
+      {
+        "id": "178302386",
+        "constant_name": "Food Science"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178302387",
+        "constant_name": "Arabic"
+      },
+      {
+        "id": "178302388",
+        "constant_name": "French"
+      },
+      {
+        "id": "178302389",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339582",
+    "title": "Data Privacy and HS&E Intern",
+    "status": "open",
+    "location": "Panamá, Provincia de Panamá, Panamá",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 1,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/6y7es86cicnzxtt2o339rkwip2m1",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "8",
+      "short_name": "GT"
+    },
+    "host_lc": {
+      "id": "193",
+      "name": "UTP",
+      "country": "Panama"
+    },
+    "skills": [
+      {
+        "id": "178305935",
+        "constant_name": "Microsoft Excel"
+      },
+      {
+        "id": "178305936",
+        "constant_name": "Sharepoint"
+      },
+      {
+        "id": "178305937",
+        "constant_name": "PowerBI"
+      },
+      {
+        "id": "178305938",
+        "constant_name": "Strategic Planning"
+      },
+      {
+        "id": "178305939",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178305931",
+        "constant_name": "Business administration"
+      },
+      {
+        "id": "178305932",
+        "constant_name": "Industrial engineering"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178305933",
+        "constant_name": "English"
+      },
+      {
+        "id": "178305934",
+        "constant_name": "Spanish"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "not_provided",
+      "accommodation_covered": "not_covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": 1400
+    }
+  },
+  {
+    "id": "1339567",
+    "title": "Fingerprint [4 weeks]",
+    "status": "open",
+    "location": "Κορωπί 194 00, Ελλάδα",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 4,
+    "available_openings": 4,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/w20fkshzpj7chy945exn6n3y7554",
+      "filename": "Ανώνυμο σχέδιο (5).jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "834",
+      "name": "ATHENS",
+      "country": "Greece"
+    },
+    "skills": [
+      {
+        "id": "178298815",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178298816",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178298817",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178298818",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178298811",
+        "constant_name": "Education"
+      },
+      {
+        "id": "178298812",
+        "constant_name": "Arts"
+      },
+      {
+        "id": "178298813",
+        "constant_name": "Other"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178298814",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339566",
+    "title": "Global Classroom [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 14,
+    "available_openings": 14,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/he6fn5rlxqt2n0nrhqa1yq302a1x",
+      "filename": "OK.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178298666",
+        "constant_name": "Language Teaching"
+      },
+      {
+        "id": "178298667",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178298668",
+        "constant_name": "Facilitation"
+      },
+      {
+        "id": "178298669",
+        "constant_name": "Presentation skills"
+      },
+      {
+        "id": "178298670",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178298662",
+        "constant_name": "Languages"
+      },
+      {
+        "id": "178298663",
+        "constant_name": "Linguistics"
+      },
+      {
+        "id": "178298664",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178298665",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339565",
+    "title": "Youth 4 Impact",
+    "status": "open",
+    "location": "South Tangerang, South Tangerang City, Banten, Indonesia",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 2,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/c1vcj7rqg8wnh2eoq2a6mbwfou4v",
+      "filename": "Screenshot 90(3895).png",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "2092",
+      "name": "UIN Jakarta",
+      "country": "Indonesia"
+    },
+    "skills": [
+      {
+        "id": "178298690",
+        "constant_name": "Language Teaching"
+      },
+      {
+        "id": "178298691",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178298692",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178298693",
+        "constant_name": "Time Management"
+      },
+      {
+        "id": "178298694",
+        "constant_name": "Strategic Planning"
+      },
+      {
+        "id": "178298695",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178298685",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178298686",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339564",
+    "title": "Scale Up! [4 weeks]",
+    "status": "open",
+    "location": "Κορωπί 194 00, Ελλάδα",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 4,
+    "available_openings": 4,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/xq3kz1qm7hcdfj38q9pwvpa9tzxw",
+      "filename": "botanical.png",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "834",
+      "name": "ATHENS",
+      "country": "Greece"
+    },
+    "skills": [
+      {
+        "id": "178298571",
+        "constant_name": "Digital Marketing"
+      },
+      {
+        "id": "178298572",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178298573",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178298574",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178298575",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178298569",
+        "constant_name": "Marketing"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178298570",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339563",
+    "title": "Marketing ",
+    "status": "open",
+    "location": "Sousse, Tunisie",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 1,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/y0nd78cc5z1cfqgon5l1g3zr671f",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "8",
+      "short_name": "GT"
+    },
+    "host_lc": {
+      "id": "270",
+      "name": "HADRUMET",
+      "country": "Tunisia"
+    },
+    "skills": [
+      {
+        "id": "178298316",
+        "constant_name": "Adobe After Effects"
+      },
+      {
+        "id": "178298317",
+        "constant_name": "Filming"
+      },
+      {
+        "id": "178298318",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178298319",
+        "constant_name": "Content Marketing"
+      },
+      {
+        "id": "178298320",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178298313",
+        "constant_name": "Marketing"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178298314",
+        "constant_name": "English"
+      },
+      {
+        "id": "178298315",
+        "constant_name": "French"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "not_covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": 700
+    }
+  },
+  {
+    "id": "1339561",
+    "title": "Equify [4 week]",
+    "status": "open",
+    "location": "Trento, Autonomous Province of Trento, Italy",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 1,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/ofhrtcqroueszdetuk7ih9etfgzt",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "1370",
+      "name": "Trento",
+      "country": "Italy"
+    },
+    "skills": [
+      {
+        "id": "178321080",
+        "constant_name": "Language Teaching"
+      },
+      {
+        "id": "178321081",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178321075",
+        "constant_name": "Education"
+      },
+      {
+        "id": "178321076",
+        "constant_name": "Psychology"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178321077",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": 350
+    }
+  },
+  {
+    "id": "1339560",
+    "title": "Green Leaders [4 week]",
+    "status": "open",
+    "location": "Κορωπί 194 00, Ελλάδα",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 6,
+    "available_openings": 6,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/zua1tvkb1429b1tcbnci29xm4yu6",
+      "filename": "Ανώνυμο σχέδιο (3).png",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "834",
+      "name": "ATHENS",
+      "country": "Greece"
+    },
+    "skills": [
+      {
+        "id": "178298007",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178298008",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178298009",
+        "constant_name": "Collaboration"
+      },
+      {
+        "id": "178298010",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178298004",
+        "constant_name": "Earth Sciences"
+      },
+      {
+        "id": "178298005",
+        "constant_name": "Ecology"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178298006",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339554",
+    "title": "ESL TEACHER (CAMBRIDGE AND IELTS) AT PES",
+    "status": "open",
+    "location": "Tan Ninh, Tay Ninh, Vietnam",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 2,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/bg4bavzmyflcyobd8bwxvjj2zd80",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "9",
+      "short_name": "GT"
+    },
+    "host_lc": {
+      "id": "259",
+      "name": "FHCMC",
+      "country": "Vietnam"
+    },
+    "skills": [
+      {
+        "id": "178297201",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178297202",
+        "constant_name": "Language Teaching"
+      },
+      {
+        "id": "178297203",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178297204",
+        "constant_name": "Time Management"
+      },
+      {
+        "id": "178297205",
+        "constant_name": "Team Management"
+      },
+      {
+        "id": "178297206",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178297198",
+        "constant_name": "Languages"
+      },
+      {
+        "id": "178297199",
+        "constant_name": "Education"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178297200",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "not_provided",
+      "accommodation_covered": "not_covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": 910
+    }
+  },
+  {
+    "id": "1339553",
+    "title": "English Teacher at Enrich English Center",
+    "status": "open",
+    "location": "Huế, Hue, Vietnam",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 1,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/rntib374yl67a6nx8o8n1zedbena",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "9",
+      "short_name": "GT"
+    },
+    "host_lc": {
+      "id": "259",
+      "name": "FHCMC",
+      "country": "Vietnam"
+    },
+    "skills": [
+      {
+        "id": "178295567",
+        "constant_name": "Language Teaching"
+      },
+      {
+        "id": "178295568",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178295564",
+        "constant_name": "Education"
+      },
+      {
+        "id": "178295565",
+        "constant_name": "Linguistics"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178295566",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "not_provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": 1000
+    }
+  },
+  {
+    "id": "1339548",
+    "title": "SALES at ROYAL FIRE SYSTEMS",
+    "status": "open",
+    "location": "Adana, Reşatbey, Seyhan/Adana, Türkiye",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 1,
+    "available_openings": 1,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/9bcuvbqnopiam8lj5cribaqkyocw",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "8",
+      "short_name": "GT"
+    },
+    "host_lc": {
+      "id": "941",
+      "name": "ADANA",
+      "country": "Turkey"
+    },
+    "skills": [
+      {
+        "id": "178294536",
+        "constant_name": "Data Analysis"
+      },
+      {
+        "id": "178294537",
+        "constant_name": "Presentation skills"
+      },
+      {
+        "id": "178294538",
+        "constant_name": "Sales"
+      },
+      {
+        "id": "178294539",
+        "constant_name": "Client servicing"
+      },
+      {
+        "id": "178294540",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178294531",
+        "constant_name": "Marketing"
+      },
+      {
+        "id": "178294532",
+        "constant_name": "Business administration"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178294533",
+        "constant_name": "English"
+      },
+      {
+        "id": "178294534",
+        "constant_name": "Arabic"
+      },
+      {
+        "id": "178294535",
+        "constant_name": "French"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": 15000
+    }
+  },
+  {
+    "id": "1339547",
+    "title": "Fingerprint [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 41,
+    "available_openings": 41,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/8nuz3irh9l7xqspx0dvegzfuwny8",
+      "filename": "Fingerprint.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178294558",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178294559",
+        "constant_name": "Facilitation"
+      },
+      {
+        "id": "178294560",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178294561",
+        "constant_name": "Presentation skills"
+      },
+      {
+        "id": "178294562",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178294554",
+        "constant_name": "Arts"
+      },
+      {
+        "id": "178294555",
+        "constant_name": "Theatre"
+      },
+      {
+        "id": "178294556",
+        "constant_name": "Music"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178294557",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339533",
+    "title": "Global Classroom [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 28,
+    "available_openings": 28,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/stz2hb2dd3od89ex24ek73f43lkm",
+      "filename": "tech.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178291834",
+        "constant_name": "Language Teaching"
+      },
+      {
+        "id": "178291835",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178291836",
+        "constant_name": "Presentation skills"
+      },
+      {
+        "id": "178291837",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178291831",
+        "constant_name": "Languages"
+      },
+      {
+        "id": "178291832",
+        "constant_name": "Linguistics"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178291833",
+        "constant_name": "French"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339530",
+    "title": "Global Classroom [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 28,
+    "available_openings": 28,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/2oib6utdcuxqflo8mxzc2jblhnce",
+      "filename": "TEACH.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178291677",
+        "constant_name": "Language Teaching"
+      },
+      {
+        "id": "178291678",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178291679",
+        "constant_name": "Presentation skills"
+      },
+      {
+        "id": "178291680",
+        "constant_name": "Facilitation"
+      },
+      {
+        "id": "178291681",
+        "constant_name": "Training"
+      },
+      {
+        "id": "178291682",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178291675",
+        "constant_name": "Languages"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178291676",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339529",
+    "title": "Global Classroom [6 weeks]",
+    "status": "open",
+    "location": "Thanh Binh, Dong Thap, Vietnam",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 5,
+    "available_openings": 5,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/zusi2psd1m5ncpnobkl6al7o3eqd",
+      "filename": "Thiết kế chưa có tên.png",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "259",
+      "name": "FHCMC",
+      "country": "Vietnam"
+    },
+    "skills": [
+      {
+        "id": "178291644",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178291645",
+        "constant_name": "Language Teaching"
+      },
+      {
+        "id": "178291646",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178291647",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178291648",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178291641",
+        "constant_name": "Education"
+      },
+      {
+        "id": "178291642",
+        "constant_name": "Languages"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178291643",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "not_provided",
+      "food_covered": "not_covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339528",
+    "title": "Fingerprint [4 weeks]",
+    "status": "open",
+    "location": "Târgu Mureș, România",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 4,
+    "available_openings": 4,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/er21nc3e45jwynmb1speoqnb2vfe",
+      "filename": "WhatsApp Image 2026-09-09 at 16.12.09.jpeg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "1458",
+      "name": "Cluj-Napoca",
+      "country": "Romania"
+    },
+    "skills": [
+      {
+        "id": "178291573",
+        "constant_name": "Adaptability"
+      },
+      {
+        "id": "178291574",
+        "constant_name": "Creativity"
+      },
+      {
+        "id": "178291575",
+        "constant_name": "High School"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178291570",
+        "constant_name": "Education"
+      },
+      {
+        "id": "178291571",
+        "constant_name": "Psychology"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178291572",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339527",
+    "title": "Heartbeat [4 weeks]",
+    "status": "open",
+    "location": "Casablanca, Maroc",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 40,
+    "available_openings": 39,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/a20ky8br4p998m1qhf84pivbvvr2",
+      "filename": "HB.jpg",
+      "is_default": false
+    },
+    "programme": {
+      "id": "7",
+      "short_name": "GV"
+    },
+    "host_lc": {
+      "id": "534",
+      "name": "Casablanca",
+      "country": "Morocco"
+    },
+    "skills": [
+      {
+        "id": "178291530",
+        "constant_name": "First Aid"
+      },
+      {
+        "id": "178291531",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178291532",
+        "constant_name": "Coaching"
+      },
+      {
+        "id": "178291533",
+        "constant_name": "Self Awareness"
+      },
+      {
+        "id": "178291534",
+        "constant_name": "Self-Confidence"
+      },
+      {
+        "id": "178291535",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178291526",
+        "constant_name": "Psychology"
+      },
+      {
+        "id": "178291527",
+        "constant_name": "Health Science"
+      },
+      {
+        "id": "178291528",
+        "constant_name": "Medicine"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178291529",
+        "constant_name": "English"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "provided",
+      "accommodation_covered": "covered",
+      "food_provided": "provided",
+      "food_covered": "covered",
+      "computer_provided": "not_provided",
+      "transportation_provided": "provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": null
+    }
+  },
+  {
+    "id": "1339525",
+    "title": "Lawyer/ Legal Traniee",
+    "status": "open",
+    "location": "İstanbul, Türkiye",
+    "applications_close_date": null,
+    "earliest_start_date": null,
+    "latest_end_date": null,
+    "duration": null,
+    "openings": 10,
+    "available_openings": 10,
+    "cover_photo": {
+      "url": "https://s3.eu-west-1.amazonaws.com/gis-production-eu/x7ixm7xkgc5hmz465rv79g5naf54",
+      "filename": "default-cover-photo.jpg",
+      "is_default": true
+    },
+    "programme": {
+      "id": "8",
+      "short_name": "GT"
+    },
+    "host_lc": {
+      "id": "813",
+      "name": "ISTANBUL",
+      "country": "Turkey"
+    },
+    "skills": [
+      {
+        "id": "178312065",
+        "constant_name": "Professional Skills"
+      },
+      {
+        "id": "178312066",
+        "constant_name": "Communication"
+      },
+      {
+        "id": "178312067",
+        "constant_name": "Bachelor"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "178312059",
+        "constant_name": "Business administration"
+      },
+      {
+        "id": "178312060",
+        "constant_name": "Languages"
+      },
+      {
+        "id": "178312061",
+        "constant_name": "Law"
+      }
+    ],
+    "languages": [
+      {
+        "id": "178312062",
+        "constant_name": "English"
+      },
+      {
+        "id": "178312063",
+        "constant_name": "Ukrainian"
+      },
+      {
+        "id": "178312064",
+        "constant_name": "Russian"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_provided": "not_provided",
+      "accommodation_covered": "not_covered",
+      "food_provided": "not_provided",
+      "food_covered": "covered",
+      "computer_provided": "provided",
+      "transportation_provided": "not_provided"
+    },
+    "legal_info": {
+      "visa_type": null,
+      "visa_duration": null
+    },
+    "specifics_info": {
+      "salary": 50000
+    }
+  }
+]
