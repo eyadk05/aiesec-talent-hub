@@ -1,10 +1,11 @@
 import { AIESECOpportunity, FilterState, ApiResponse } from './types';
 import realOppsData from './real-live-opps.json';
 
-export const REAL_LIVE_OPPORTUNITIES: AIESECOpportunity[] = realOppsData as AIESECOpportunity[];
+// Patch salary_currency from 'USD' default to country-appropriate currency after functions are defined
+const _rawRealOpps: AIESECOpportunity[] = realOppsData as AIESECOpportunity[];
 
 // Live Cache State initialized with all 842 authentic GTa & GTe opportunities
-let liveDataset: AIESECOpportunity[] = [...REAL_LIVE_OPPORTUNITIES];
+let liveDataset: AIESECOpportunity[] = _rawRealOpps; // will be patched after COUNTRY_CURRENCY_MAP is defined
 let lastFetchedTime = 0;
 let isSyncing = false;
 const CACHE_TTL_MS = 15 * 60 * 1000; // 15 minutes auto-revalidation
@@ -41,6 +42,88 @@ function cleanCountry(rawC?: string, rawLoc?: string): string {
   if (c === 'The Philippines') return 'Philippines';
   return c;
 }
+
+const COUNTRY_CURRENCY_MAP: Record<string, string> = {
+  // Europe
+  'germany': 'EUR', 'france': 'EUR', 'italy': 'EUR', 'spain': 'EUR',
+  'netherlands': 'EUR', 'portugal': 'EUR', 'greece': 'EUR', 'austria': 'EUR',
+  'belgium': 'EUR', 'finland': 'EUR', 'ireland': 'EUR', 'luxembourg': 'EUR',
+  'slovakia': 'EUR', 'slovenia': 'EUR', 'estonia': 'EUR', 'latvia': 'EUR',
+  'lithuania': 'EUR', 'malta': 'EUR', 'cyprus': 'EUR',
+  'turkey': 'TRY',
+  'poland': 'PLN',
+  'czech republic': 'CZK',
+  'hungary': 'HUF',
+  'romania': 'RON',
+  'bulgaria': 'BGN',
+  'serbia': 'RSD',
+  'sweden': 'SEK',
+  'norway': 'NOK',
+  'denmark': 'DKK',
+  'switzerland': 'CHF',
+  'united kingdom': 'GBP', 'uk': 'GBP',
+  // Asia
+  'india': 'INR',
+  'japan': 'JPY',
+  'china': 'CNY',
+  'south korea': 'KRW',
+  'indonesia': 'IDR',
+  'malaysia': 'MYR',
+  'thailand': 'THB',
+  'vietnam': 'VND',
+  'philippines': 'PHP',
+  'singapore': 'SGD',
+  'taiwan': 'TWD',
+  'hong kong': 'HKD',
+  'pakistan': 'PKR',
+  'sri lanka': 'LKR',
+  'united arab emirates': 'AED',
+  'qatar': 'QAR',
+  'oman': 'OMR',
+  'jordan': 'JOD',
+  // Africa
+  'egypt': 'EGP',
+  'morocco': 'MAD',
+  'nigeria': 'NGN',
+  'kenya': 'KES',
+  'south africa': 'ZAR',
+  'ghana': 'GHS',
+  'tanzania': 'TZS',
+  'uganda': 'UGX',
+  'ethiopia': 'ETB',
+  'senegal': 'XOF',
+  'cameroon': 'XAF',
+  'ivory coast': 'XOF',
+  'algeria': 'DZD',
+  'tunisia': 'TND',
+  // Americas
+  'brazil': 'BRL',
+  'mexico': 'MXN',
+  'colombia': 'COP',
+  'argentina': 'ARS',
+  'peru': 'PEN',
+  'chile': 'CLP',
+  'panama': 'USD',
+  'costa rica': 'CRC',
+  'dominican republic': 'DOP',
+  'united states': 'USD',
+  'canada': 'CAD',
+  'ecuador': 'USD',
+};
+
+function getCurrencyForCountry(country: string): string {
+  const key = country.toLowerCase().trim();
+  return COUNTRY_CURRENCY_MAP[key] || 'USD';
+}
+
+// Patch the static dataset: correct salary_currency from 'USD' fallback to country-appropriate currency
+export const REAL_LIVE_OPPORTUNITIES: AIESECOpportunity[] = _rawRealOpps.map(opp => ({
+  ...opp,
+  salary_currency: getCurrencyForCountry(opp.country || '')
+}));
+
+// Re-initialize liveDataset with patched data
+liveDataset = [...REAL_LIVE_OPPORTUNITIES];
 
 function getRegion(country: string): 'Africa' | 'Asia' | 'Americas' | 'Europe' {
   const c = country.toLowerCase().trim();
@@ -233,7 +316,7 @@ export async function syncLiveAiesecDataset(): Promise<AIESECOpportunity[]> {
               earliest_start_date: startDate,
               duration: durationWeeks,
               salary: salaryVal,
-              salary_currency: 'USD',
+              salary_currency: getCurrencyForCountry(country),
               payment_period: salaryVal > 0 ? 'Monthly' : 'Unpaid',
               skills: skills,
               backgrounds: backgrounds,
