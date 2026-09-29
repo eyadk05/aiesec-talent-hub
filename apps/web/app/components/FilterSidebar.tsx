@@ -209,7 +209,60 @@ export default function FilterSidebar({
         </div>
       </div>
 
-      {/* Duration Filter */}
+      {/* Duration Category Filter */}
+      <div>
+        <label style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.4rem',
+          fontSize: '0.85rem',
+          fontWeight: 700,
+          marginBottom: '0.75rem',
+          color: 'var(--text-main)'
+        }}>
+          <Clock size={15} style={{ color: 'var(--color-primary)' }} />
+          Duration Category
+        </label>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+          {[
+            { id: 'all', label: 'All Durations', desc: 'Show all placements' },
+            { id: 'short', label: 'Short Term', desc: '6 weeks to 3 months (up to 12 wks)' },
+            { id: 'mid', label: 'Mid Term', desc: '4 months to 6 months (14 to 26 wks)' },
+            { id: 'long', label: 'Long Term', desc: 'More than 6 months (> 26 wks)' }
+          ].map(opt => (
+            <label
+              key={opt.id}
+              style={{
+                display: 'flex',
+                alignItems: 'flex-start',
+                gap: '0.6rem',
+                fontSize: '0.85rem',
+                cursor: 'pointer',
+                padding: '0.45rem 0.6rem',
+                borderRadius: 'var(--radius-md)',
+                backgroundColor: (filterState.durationType || 'all') === opt.id ? 'var(--color-primary-light)' : 'var(--bg-subtle)',
+                border: `1px solid ${(filterState.durationType || 'all') === opt.id ? 'var(--color-primary)' : 'var(--border-color)'}`,
+                transition: 'all var(--transition-fast)'
+              }}
+            >
+              <input
+                type="radio"
+                name="durationType"
+                checked={(filterState.durationType || 'all') === opt.id}
+                onChange={() => onFilterChange({ durationType: opt.id as any })}
+                style={{ accentColor: 'var(--color-primary)', marginTop: '0.15rem' }}
+              />
+              <div>
+                <span style={{ fontWeight: 600, display: 'block', color: 'var(--text-main)', fontSize: '0.85rem' }}>{opt.label}</span>
+                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{opt.desc}</span>
+              </div>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Custom Duration Range Slider */}
       <div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
           <label style={{
@@ -220,7 +273,6 @@ export default function FilterSidebar({
             fontWeight: 700,
             color: 'var(--text-main)'
           }}>
-            <Clock size={15} style={{ color: 'var(--color-primary)' }} />
             Max Duration
           </label>
           <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--color-primary)' }}>

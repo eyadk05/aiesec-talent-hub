@@ -75,7 +75,24 @@ export function getMockFilteredOpportunities(filters: FilterState, page = 1, per
     items = items.filter(opp => Boolean(opp.logistics_info?.food_provided));
   }
 
-  // Duration Filter
+  // Duration Type Category Filter (Short: 6w-3m, Mid: 4m-6m, Long: >6m)
+  if (filters.durationType && filters.durationType !== 'all') {
+    items = items.filter(opp => {
+      const d = opp.duration || 0;
+      if (filters.durationType === 'short') {
+        return d <= 13; // Short Term: 6 weeks up to 3 months (<= 13 weeks)
+      }
+      if (filters.durationType === 'mid') {
+        return d >= 14 && d <= 26; // Mid Term: 4 to 6 months (14 to 26 weeks)
+      }
+      if (filters.durationType === 'long') {
+        return d > 26; // Long Term: more than 6 months (> 26 weeks)
+      }
+      return true;
+    });
+  }
+
+  // Duration Range Filter
   if (Array.isArray(filters.durationRange)) {
     const minDur = filters.durationRange[0] ?? 1;
     const maxDur = filters.durationRange[1] ?? 52;

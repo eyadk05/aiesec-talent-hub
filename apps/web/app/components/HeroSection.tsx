@@ -244,6 +244,43 @@ export default function HeroSection({
           </button>
         </div>
 
+        {/* Duration Quick Filter Pills */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '0.5rem',
+          flexWrap: 'wrap',
+          marginBottom: '1.5rem'
+        }}>
+          <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-muted)', marginRight: '0.25rem' }}>Duration:</span>
+          {[
+            { id: 'all', label: 'Any Duration' },
+            { id: 'short', label: '⚡ Short Term (6w - 3m)' },
+            { id: 'mid', label: '📅 Mid Term (4m - 6m)' },
+            { id: 'long', label: '🚀 Long Term (> 6m)' }
+          ].map(d => (
+            <button
+              key={d.id}
+              onClick={() => onFilterChange({ durationType: d.id as any })}
+              style={{
+                padding: '0.35rem 0.85rem',
+                borderRadius: 'var(--radius-full)',
+                fontWeight: 600,
+                fontSize: '0.8rem',
+                cursor: 'pointer',
+                border: '1px solid',
+                borderColor: (filterState.durationType || 'all') === d.id ? 'var(--color-primary)' : 'var(--border-color)',
+                backgroundColor: (filterState.durationType || 'all') === d.id ? 'var(--color-primary-light)' : 'var(--bg-card)',
+                color: (filterState.durationType || 'all') === d.id ? 'var(--color-primary)' : 'var(--text-muted)',
+                transition: 'all var(--transition-fast)'
+              }}
+            >
+              {d.label}
+            </button>
+          ))}
+        </div>
+
         {/* Live Counters */}
         <div style={{
           display: 'flex',

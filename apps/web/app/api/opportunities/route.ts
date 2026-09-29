@@ -14,6 +14,7 @@ export async function GET(request: NextRequest) {
   const countryFilter = searchParams.get('country') || 'all';
   const durationMin = parseInt(searchParams.get('duration_min') || '1', 10);
   const durationMax = parseInt(searchParams.get('duration_max') || '78', 10);
+  const durationType = (searchParams.get('duration_type') as FilterState['durationType']) || 'all';
   const stipendOnly = searchParams.get('stipend_only') === 'true';
   const accommodationProvided = searchParams.get('accommodation') === 'true';
   const foodProvided = searchParams.get('food') === 'true';
@@ -25,6 +26,7 @@ export async function GET(request: NextRequest) {
     region,
     country: countryFilter,
     durationRange: [durationMin, durationMax],
+    durationType,
     stipendOnly,
     accommodationProvided,
     foodProvided,

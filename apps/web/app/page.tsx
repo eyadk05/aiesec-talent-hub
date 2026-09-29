@@ -19,6 +19,7 @@ const INITIAL_FILTERS: FilterState = {
   country: 'all',
   region: 'all',
   durationRange: [1, 52],
+  durationType: 'all',
   stipendOnly: false,
   accommodationProvided: false,
   foodProvided: false,
@@ -117,6 +118,7 @@ export default function Page() {
     if (filterState.country && filterState.country !== 'all') queryParams.set('country', filterState.country);
     queryParams.set('duration_min', String(filterState.durationRange[0]));
     queryParams.set('duration_max', String(filterState.durationRange[1]));
+    if (filterState.durationType && filterState.durationType !== 'all') queryParams.set('duration_type', filterState.durationType);
     if (filterState.stipendOnly) queryParams.set('stipend_only', 'true');
     if (filterState.accommodationProvided) queryParams.set('accommodation', 'true');
     if (filterState.foodProvided) queryParams.set('food', 'true');

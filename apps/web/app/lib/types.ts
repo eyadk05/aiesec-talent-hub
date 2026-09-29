@@ -74,12 +74,15 @@ export interface AIESECOpportunity {
   is_featured?: boolean;
 }
 
+export type DurationCategory = 'all' | 'short' | 'mid' | 'long';
+
 export interface FilterState {
   searchQuery: string;
   programmes: string[]; // ['GTa', 'GTe']
   country: string;
   region: WorldRegion;
   durationRange: [number, number]; // min and max weeks
+  durationType: DurationCategory; // 'all' | 'short' (6w-3m) | 'mid' (4m-6m) | 'long' (>6m)
   stipendOnly: boolean;
   accommodationProvided: boolean;
   foodProvided: boolean;
