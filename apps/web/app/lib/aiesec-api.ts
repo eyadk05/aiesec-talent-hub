@@ -6,6 +6,7 @@ export const REAL_LIVE_OPPORTUNITIES: AIESECOpportunity[] = realOppsData as AIES
 // Live Cache State initialized with all 842 authentic GTa & GTe opportunities
 let liveDataset: AIESECOpportunity[] = [...REAL_LIVE_OPPORTUNITIES];
 let lastFetchedTime = 0;
+let isSyncing = false;
 const CACHE_TTL_MS = 15 * 60 * 1000; // 15 minutes auto-revalidation
 
 const PUBLIC_GIS_TOKEN = 'e316ebe109dd84ed16734e5161a2d236d0a7e6daf499941f7c110078e3c75493';
@@ -54,224 +55,228 @@ function getRegion(country: string): 'Africa' | 'Asia' | 'Americas' | 'Europe' {
   return 'Americas';
 }
 
-// Background Automated Multi-Page Sync with AIESEC.org
+// Non-blocking Instant Automated Sync with AIESEC.org
 export async function syncLiveAiesecDataset(): Promise<AIESECOpportunity[]> {
   const now = Date.now();
+  const activeDataset = (Array.isArray(liveDataset) && liveDataset.length >= 100) ? liveDataset : REAL_LIVE_OPPORTUNITIES;
 
-  // If cached and dataset contains the full 840+ items, return immediately
-  if (now - lastFetchedTime < CACHE_TTL_MS && liveDataset.length >= 800) {
-    return liveDataset;
-  }
+  // Trigger non-blocking background fetch if cache expired and not currently syncing
+  if (now - lastFetchedTime > CACHE_TTL_MS && !isSyncing) {
+    isSyncing = true;
+    lastFetchedTime = now;
 
-  try {
-    const query = `
-      query OpportunitySearch($page: Int, $per_page: Int) {
-        allOpportunity(page: $page, per_page: $per_page) {
-          paging {
-            total_pages
-          }
-          data {
-            id
-            title
-            status
-            location
-            openings
-            available_openings
-            cover_photo
-            programme {
-              id
-              short_name
-            }
-            host_lc {
-              id
-              name
-              country
-            }
-            skills {
-              id
-              constant_name
-            }
-            backgrounds {
-              id
-              constant_name
-            }
-            languages {
-              id
-              constant_name
-            }
-            logistics_info {
-              accommodation_provided
-              food_provided
-              food_covered
-              computer_provided
-              transportation_provided
-            }
-            legal_info {
-              visa_type
-              visa_duration
-            }
-            specifics_info {
-              salary
-            }
-            all_slots {
-              nodes {
+    // Run background sync without blocking response
+    (async () => {
+      try {
+        const query = `
+          query OpportunitySearch($page: Int, $per_page: Int) {
+            allOpportunity(page: $page, per_page: $per_page) {
+              paging {
+                total_pages
+              }
+              data {
                 id
-                start_date
-                end_date
-                applications_close_date
+                title
                 status
+                location
+                openings
+                available_openings
+                cover_photo
+                programme {
+                  id
+                  short_name
+                }
+                host_lc {
+                  id
+                  name
+                  country
+                }
+                skills {
+                  id
+                  constant_name
+                }
+                backgrounds {
+                  id
+                  constant_name
+                }
+                languages {
+                  id
+                  constant_name
+                }
+                logistics_info {
+                  accommodation_provided
+                  food_provided
+                  food_covered
+                  computer_provided
+                  transportation_provided
+                }
+                legal_info {
+                  visa_type
+                  visa_duration
+                }
+                specifics_info {
+                  salary
+                }
+                all_slots {
+                  nodes {
+                    id
+                    start_date
+                    end_date
+                    applications_close_date
+                    status
+                  }
+                }
               }
             }
           }
+        `;
+
+        let allRawFetched: any[] = [];
+        for (let page = 1; page <= 10; page++) {
+          const res = await fetch(`https://gis-api.aiesec.org/graphql?access_token=${PUBLIC_GIS_TOKEN}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ query, variables: { page, per_page: 100 } }),
+            signal: AbortSignal.timeout(8000)
+          });
+
+          if (!res.ok) break;
+          const json = await res.json();
+          const items = json?.data?.allOpportunity?.data || [];
+          if (items.length === 0) break;
+          allRawFetched.push(...items);
         }
-      }
-    `;
 
-    let allRawFetched: any[] = [];
-    // Fetch multi-page to capture full catalog across all regions
-    for (let page = 1; page <= 15; page++) {
-      const res = await fetch(`https://gis-api.aiesec.org/graphql?access_token=${PUBLIC_GIS_TOKEN}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query, variables: { page, per_page: 100 } }),
-        next: { revalidate: 900 }
-      });
+        if (allRawFetched.length > 0) {
+          const filtered = allRawFetched.filter((opp: any) => {
+            const short = (opp.programme?.short_name || '').toUpperCase();
+            const idStr = String(opp.programme?.id);
+            const title = (opp.title || '').toLowerCase();
+            const countryClean = cleanCountry(opp.host_lc?.country, opp.location);
 
-      if (!res.ok) break;
-      const json = await res.json();
-      const items = json?.data?.allOpportunity?.data || [];
-      if (items.length === 0) break;
-      allRawFetched.push(...items);
-    }
+            if (short === 'GV' || idStr === '7' || short.includes('VOLUNTEER')) return false;
+            if (countryClean.toLowerCase().includes('tunisia') || (opp.location || '').toLowerCase().includes('tunisia')) return false;
+            if (title.includes('premium')) return false;
 
-    if (allRawFetched.length > 0) {
-      const filtered = allRawFetched.filter((opp: any) => {
-        const short = (opp.programme?.short_name || '').toUpperCase();
-        const idStr = String(opp.programme?.id);
-        const title = (opp.title || '').toLowerCase();
-        const countryClean = cleanCountry(opp.host_lc?.country, opp.location);
+            return (
+              short === 'GTA' || short === 'GTE' || short === 'GT' ||
+              idStr === '8' || idStr === '9' || idStr === '2' || idStr === '5' ||
+              short.includes('TALENT') || short.includes('TEACHER')
+            );
+          });
 
-        if (short === 'GV' || idStr === '7' || short.includes('VOLUNTEER')) return false;
-        if (countryClean.toLowerCase().includes('tunisia') || (opp.location || '').toLowerCase().includes('tunisia')) return false;
-        if (title.includes('premium')) return false;
+          const formatted: AIESECOpportunity[] = filtered.map((opp: any) => {
+            const progIdStr = String(opp.programme?.id);
+            const shortUpper = (opp.programme?.short_name || '').toUpperCase();
+            const isGTe = progIdStr === '9' || progIdStr === '5' || shortUpper === 'GTE' || shortUpper.includes('TEACH');
 
-        return (
-          short === 'GTA' || short === 'GTE' || short === 'GT' ||
-          idStr === '8' || idStr === '9' || idStr === '2' || idStr === '5' ||
-          short.includes('TALENT') || short.includes('TEACHER')
-        );
-      });
+            const pShort = isGTe ? 'GTe' : 'GTa';
+            const pName = isGTe ? 'Global Teacher' : 'Global Talent';
 
-      const formatted: AIESECOpportunity[] = filtered.map((opp: any) => {
-        const progIdStr = String(opp.programme?.id);
-        const shortUpper = (opp.programme?.short_name || '').toUpperCase();
-        const isGTe = progIdStr === '9' || progIdStr === '5' || shortUpper === 'GTE' || shortUpper.includes('TEACH');
+            const country = cleanCountry(opp.host_lc?.country, opp.location);
+            const city = opp.host_lc?.name || 'City';
+            const region = getRegion(country);
 
-        const pShort = isGTe ? 'GTe' : 'GTa';
-        const pName = isGTe ? 'Global Teacher' : 'Global Talent';
+            const slotNodes = opp.all_slots?.nodes || [];
+            const activeSlot = slotNodes.find((s: any) => s.status === 'live' || s.start_date) || slotNodes[0];
 
-        const country = cleanCountry(opp.host_lc?.country, opp.location);
-        const city = opp.host_lc?.name || 'City';
-        const region = getRegion(country);
+            let startDate = '2026-11-01';
+            let closeDate = '2026-10-25';
+            let durationWeeks = 12;
 
-        const slotNodes = opp.all_slots?.nodes || [];
-        const activeSlot = slotNodes.find((s: any) => s.status === 'live' || s.start_date) || slotNodes[0];
+            if (activeSlot) {
+              if (activeSlot.start_date) startDate = activeSlot.start_date.slice(0, 10);
+              if (activeSlot.applications_close_date) closeDate = activeSlot.applications_close_date.slice(0, 10);
 
-        let startDate = '2026-11-01';
-        let closeDate = '2026-10-25';
-        let durationWeeks = 12;
+              if (activeSlot.start_date && activeSlot.end_date) {
+                const d1 = new Date(activeSlot.start_date);
+                const d2 = new Date(activeSlot.end_date);
+                const diffDays = Math.round((d2.getTime() - d1.getTime()) / (24 * 60 * 60 * 1000));
+                if (diffDays > 0) durationWeeks = Math.max(1, Math.round(diffDays / 7));
+              }
+            }
 
-        if (activeSlot) {
-          if (activeSlot.start_date) startDate = activeSlot.start_date.slice(0, 10);
-          if (activeSlot.applications_close_date) closeDate = activeSlot.applications_close_date.slice(0, 10);
+            let coverUrl = 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80';
+            if (opp.cover_photo && typeof opp.cover_photo === 'object' && opp.cover_photo.url) {
+              coverUrl = opp.cover_photo.url;
+            } else if (typeof opp.cover_photo === 'string' && opp.cover_photo.startsWith('http')) {
+              coverUrl = opp.cover_photo;
+            }
 
-          if (activeSlot.start_date && activeSlot.end_date) {
-            const d1 = new Date(activeSlot.start_date);
-            const d2 = new Date(activeSlot.end_date);
-            const diffDays = Math.round((d2.getTime() - d1.getTime()) / (24 * 60 * 60 * 1000));
-            if (diffDays > 0) durationWeeks = Math.max(1, Math.round(diffDays / 7));
+            const skills = Array.isArray(opp.skills) && opp.skills.length > 0
+              ? opp.skills.map((s: any) => ({ id: Number(s.id), name: s.constant_name || s.name || 'Skill' }))
+              : [{ id: 1, name: 'Professional Competencies' }];
+
+            const backgrounds = Array.isArray(opp.backgrounds)
+              ? opp.backgrounds.map((b: any) => ({ id: Number(b.id), name: b.constant_name || b.name || 'General' }))
+              : [];
+
+            const languages = Array.isArray(opp.languages) && opp.languages.length > 0
+              ? opp.languages.map((l: any) => ({ id: Number(l.id), name: l.constant_name || l.name || 'English' }))
+              : [{ id: 20, name: 'English' }];
+
+            const salaryVal = opp.specifics_info?.salary ? Number(opp.specifics_info.salary) : 0;
+
+            return {
+              id: Number(opp.id),
+              title: opp.title,
+              summary: `${pName} opportunity in ${city}, ${country}.`,
+              description: `Official ${pName} exchange opportunity managed by ${opp.host_lc?.name || 'AIESEC host'} in ${country}. Visit AIESEC.org for complete role requirements.`,
+              status: opp.status || 'open',
+              programme: { id: isGTe ? 9 : 8, short_name: pShort, name: pName },
+              host_lc: opp.host_lc || { id: 0, name: city, country: country },
+              location: opp.location || `${city}, ${country}`,
+              city: city,
+              country: country,
+              region: region,
+              applications_close_date: closeDate,
+              earliest_start_date: startDate,
+              duration: durationWeeks,
+              salary: salaryVal,
+              salary_currency: 'USD',
+              payment_period: salaryVal > 0 ? 'Monthly' : 'Unpaid',
+              skills: skills,
+              backgrounds: backgrounds,
+              languages: languages,
+              work_fields: [],
+              cover_photo: { url: coverUrl },
+              openings: opp.openings || 1,
+              available_openings: opp.available_openings || 1,
+              logistics_info: {
+                accommodation_provided: opp.logistics_info?.accommodation_provided === 'provided' || opp.logistics_info?.accommodation_provided === true,
+                food_provided: opp.logistics_info?.food_provided === 'provided' || opp.logistics_info?.food_covered === 'covered',
+                computer_provided: opp.logistics_info?.computer_provided === 'provided',
+                transportation_provided: opp.logistics_info?.transportation_provided === 'provided'
+              },
+              legal_info: {
+                visa_type: opp.legal_info?.visa_type || 'Work Permit / Exchange Visa',
+                visa_duration: opp.legal_info?.visa_duration || 'Duration of Contract'
+              },
+              is_featured: false
+            };
+          });
+
+          if (formatted.length > 50) {
+            const existingIds = new Set(formatted.map(o => String(o.id)));
+            const fallbackExtras = REAL_LIVE_OPPORTUNITIES.filter(o => !existingIds.has(String(o.id)));
+            liveDataset = [...formatted, ...fallbackExtras];
           }
         }
-
-        let coverUrl = 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80';
-        if (opp.cover_photo && typeof opp.cover_photo === 'object' && opp.cover_photo.url) {
-          coverUrl = opp.cover_photo.url;
-        } else if (typeof opp.cover_photo === 'string' && opp.cover_photo.startsWith('http')) {
-          coverUrl = opp.cover_photo;
-        }
-
-        const skills = Array.isArray(opp.skills) && opp.skills.length > 0
-          ? opp.skills.map((s: any) => ({ id: Number(s.id), name: s.constant_name || s.name || 'Skill' }))
-          : [{ id: 1, name: 'Professional Competencies' }];
-
-        const backgrounds = Array.isArray(opp.backgrounds)
-          ? opp.backgrounds.map((b: any) => ({ id: Number(b.id), name: b.constant_name || b.name || 'General' }))
-          : [];
-
-        const languages = Array.isArray(opp.languages) && opp.languages.length > 0
-          ? opp.languages.map((l: any) => ({ id: Number(l.id), name: l.constant_name || l.name || 'English' }))
-          : [{ id: 20, name: 'English' }];
-
-        const salaryVal = opp.specifics_info?.salary ? Number(opp.specifics_info.salary) : 0;
-
-        return {
-          id: Number(opp.id),
-          title: opp.title,
-          summary: `${pName} opportunity in ${city}, ${country}.`,
-          description: `Official ${pName} exchange opportunity managed by ${opp.host_lc?.name || 'AIESEC host'} in ${country}. Visit AIESEC.org for complete role requirements.`,
-          status: opp.status || 'open',
-          programme: { id: isGTe ? 9 : 8, short_name: pShort, name: pName },
-          host_lc: opp.host_lc || { id: 0, name: city, country: country },
-          location: opp.location || `${city}, ${country}`,
-          city: city,
-          country: country,
-          region: region,
-          applications_close_date: closeDate,
-          earliest_start_date: startDate,
-          duration: durationWeeks,
-          salary: salaryVal,
-          salary_currency: 'USD',
-          payment_period: salaryVal > 0 ? 'Monthly' : 'Unpaid',
-          skills: skills,
-          backgrounds: backgrounds,
-          languages: languages,
-          work_fields: [],
-          cover_photo: { url: coverUrl },
-          openings: opp.openings || 1,
-          available_openings: opp.available_openings || 1,
-          logistics_info: {
-            accommodation_provided: opp.logistics_info?.accommodation_provided === 'provided' || opp.logistics_info?.accommodation_provided === true,
-            food_provided: opp.logistics_info?.food_provided === 'provided' || opp.logistics_info?.food_covered === 'covered',
-            computer_provided: opp.logistics_info?.computer_provided === 'provided',
-            transportation_provided: opp.logistics_info?.transportation_provided === 'provided'
-          },
-          legal_info: {
-            visa_type: opp.legal_info?.visa_type || 'Work Permit / Exchange Visa',
-            visa_duration: opp.legal_info?.visa_duration || 'Duration of Contract'
-          },
-          is_featured: false
-        };
-      });
-
-      if (formatted.length > 50) {
-        // Merge with REAL_LIVE_OPPORTUNITIES to ensure complete 840+ catalog
-        const existingIds = new Set(formatted.map(o => String(o.id)));
-        const fallbackExtras = REAL_LIVE_OPPORTUNITIES.filter(o => !existingIds.has(String(o.id)));
-        liveDataset = [...formatted, ...fallbackExtras];
-        lastFetchedTime = now;
+      } catch (err) {
+        console.warn('Background GIS sync warning:', err);
+      } finally {
+        isSyncing = false;
       }
-    }
-  } catch (err) {
-    console.warn('Live GIS sync warning, using full static dataset:', err);
+    })();
   }
 
-  return liveDataset;
+  return activeDataset;
 }
 
 // Helper to filter and paginate opportunities safely
 export function getMockFilteredOpportunities(filters: FilterState, page = 1, perPage = 6, dataset: AIESECOpportunity[] = liveDataset): ApiResponse<AIESECOpportunity[]> {
   // Ensure we always filter against the full 840+ dataset
-  const targetData = (dataset && dataset.length >= 800) ? dataset : REAL_LIVE_OPPORTUNITIES;
+  const targetData = (dataset && dataset.length >= 1) ? dataset : REAL_LIVE_OPPORTUNITIES;
 
   let items = targetData.filter(opp => {
     if (!opp) return false;
@@ -353,14 +358,18 @@ export function getMockFilteredOpportunities(filters: FilterState, page = 1, per
     });
   }
 
-  // Duration Range Filter
-  if (Array.isArray(filters.durationRange)) {
+  // Duration Range Filter (only apply if durationType is 'all', to avoid double-filtering)
+  if (Array.isArray(filters.durationRange) && (!filters.durationType || filters.durationType === 'all')) {
     const minDur = filters.durationRange[0] ?? 1;
-    const maxDur = filters.durationRange[1] ?? 52;
-    items = items.filter(opp => {
-      const d = opp.duration || 0;
-      return d >= minDur && d <= maxDur;
-    });
+    const maxDur = filters.durationRange[1] ?? 104;
+    // Only apply range filter if user has meaningfully changed it from defaults
+    const isDefaultRange = minDur <= 1 && maxDur >= 78;
+    if (!isDefaultRange) {
+      items = items.filter(opp => {
+        const d = opp.duration || 0;
+        return d >= minDur && d <= maxDur;
+      });
+    }
   }
 
   // Sorting

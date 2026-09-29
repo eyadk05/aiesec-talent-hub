@@ -18,7 +18,7 @@ const INITIAL_FILTERS: FilterState = {
   programmes: [],
   country: 'all',
   region: 'all',
-  durationRange: [1, 52],
+  durationRange: [1, 78],
   durationType: 'all',
   stipendOnly: false,
   accommodationProvided: false,
@@ -116,8 +116,8 @@ export default function Page() {
     if (filterState.programmes.length > 0) queryParams.set('programmes', filterState.programmes.join(','));
     if (filterState.region && filterState.region !== 'all') queryParams.set('region', filterState.region);
     if (filterState.country && filterState.country !== 'all') queryParams.set('country', filterState.country);
-    queryParams.set('duration_min', String(filterState.durationRange[0]));
-    queryParams.set('duration_max', String(filterState.durationRange[1]));
+    if (filterState.durationRange[0] > 1) queryParams.set('duration_min', String(filterState.durationRange[0]));
+    if (filterState.durationRange[1] < 78) queryParams.set('duration_max', String(filterState.durationRange[1]));
     if (filterState.durationType && filterState.durationType !== 'all') queryParams.set('duration_type', filterState.durationType);
     if (filterState.stipendOnly) queryParams.set('stipend_only', 'true');
     if (filterState.accommodationProvided) queryParams.set('accommodation', 'true');
