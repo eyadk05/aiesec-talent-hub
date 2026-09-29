@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getMockFilteredOpportunities } from '../../lib/aiesec-api';
+import { syncLiveAiesecDataset, getMockFilteredOpportunities } from '../../lib/aiesec-api';
 import { FilterState, WorldRegion } from '../../lib/types';
+
+export const revalidate = 60; // Next.js API revalidation route
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -34,8 +36,11 @@ export async function GET(request: NextRequest) {
     sortOrder: 'desc'
   };
 
-  // Get filtered opportunities
-  const result = getMockFilteredOpportunities(filterState, page, perPage);
+  // Trigger automated real-time sync with AIESEC.org
+  const liveDataset = await syncLiveAiesecDataset();
+
+  // Get filtered opportunities from live synchronized dataset
+  const result = getMockFilteredOpportunities(filterState, page, perPage, liveDataset);
 
   return NextResponse.json(result);
 }

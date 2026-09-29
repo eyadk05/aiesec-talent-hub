@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { MOCK_OPPORTUNITIES } from '../../../lib/aiesec-api';
+import { syncLiveAiesecDataset } from '../../../lib/aiesec-api';
 
 export async function GET(
   request: NextRequest,
@@ -7,11 +7,13 @@ export async function GET(
 ) {
   const resolvedParams = await context.params;
   const id = resolvedParams?.id;
-  const mockOpp = MOCK_OPPORTUNITIES.find(o => String(o.id) === String(id));
 
-  if (mockOpp) {
+  const dataset = await syncLiveAiesecDataset();
+  const opp = dataset.find(o => String(o.id) === String(id));
+
+  if (opp) {
     return NextResponse.json({
-      data: mockOpp,
+      data: opp,
       isDemoMode: false
     });
   }
