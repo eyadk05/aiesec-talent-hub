@@ -3,10 +3,10 @@ import realOppsData from './real-live-opps.json';
 
 export const REAL_LIVE_OPPORTUNITIES: AIESECOpportunity[] = realOppsData as AIESECOpportunity[];
 
-// Live Cache State
+// Live Cache State initialized with all 842 authentic GTa & GTe opportunities
 let liveDataset: AIESECOpportunity[] = [...REAL_LIVE_OPPORTUNITIES];
 let lastFetchedTime = 0;
-const CACHE_TTL_MS = 10 * 60 * 1000; // 10 minutes auto-revalidation
+const CACHE_TTL_MS = 15 * 60 * 1000; // 15 minutes auto-revalidation
 
 const PUBLIC_GIS_TOKEN = 'e316ebe109dd84ed16734e5161a2d236d0a7e6daf499941f7c110078e3c75493';
 
@@ -54,10 +54,12 @@ function getRegion(country: string): 'Africa' | 'Asia' | 'Americas' | 'Europe' {
   return 'Americas';
 }
 
-// Background Automated Sync with AIESEC.org
+// Background Automated Multi-Page Sync with AIESEC.org
 export async function syncLiveAiesecDataset(): Promise<AIESECOpportunity[]> {
   const now = Date.now();
-  if (now - lastFetchedTime < CACHE_TTL_MS && liveDataset.length > 0) {
+
+  // If cached and dataset contains the full 840+ items, return immediately
+  if (now - lastFetchedTime < CACHE_TTL_MS && liveDataset.length >= 800) {
     return liveDataset;
   }
 
@@ -65,6 +67,9 @@ export async function syncLiveAiesecDataset(): Promise<AIESECOpportunity[]> {
     const query = `
       query OpportunitySearch($page: Int, $per_page: Int) {
         allOpportunity(page: $page, per_page: $per_page) {
+          paging {
+            total_pages
+          }
           data {
             id
             title
@@ -122,19 +127,25 @@ export async function syncLiveAiesecDataset(): Promise<AIESECOpportunity[]> {
       }
     `;
 
-    const res = await fetch(`https://gis-api.aiesec.org/graphql?access_token=${PUBLIC_GIS_TOKEN}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query, variables: { page: 1, per_page: 100 } }),
-      next: { revalidate: 600 }
-    });
+    let allRawFetched: any[] = [];
+    // Fetch multi-page to capture full catalog across all regions
+    for (let page = 1; page <= 15; page++) {
+      const res = await fetch(`https://gis-api.aiesec.org/graphql?access_token=${PUBLIC_GIS_TOKEN}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query, variables: { page, per_page: 100 } }),
+        next: { revalidate: 900 }
+      });
 
-    if (!res.ok) throw new Error(`GIS API response ${res.status}`);
-    const json = await res.json();
-    const rawData = json?.data?.allOpportunity?.data || [];
+      if (!res.ok) break;
+      const json = await res.json();
+      const items = json?.data?.allOpportunity?.data || [];
+      if (items.length === 0) break;
+      allRawFetched.push(...items);
+    }
 
-    if (rawData.length > 0) {
-      const filtered = rawData.filter((opp: any) => {
+    if (allRawFetched.length > 0) {
+      const filtered = allRawFetched.filter((opp: any) => {
         const short = (opp.programme?.short_name || '').toUpperCase();
         const idStr = String(opp.programme?.id);
         const title = (opp.title || '').toLowerCase();
@@ -224,6 +235,7 @@ export async function syncLiveAiesecDataset(): Promise<AIESECOpportunity[]> {
           skills: skills,
           backgrounds: backgrounds,
           languages: languages,
+          work_fields: [],
           cover_photo: { url: coverUrl },
           openings: opp.openings || 1,
           available_openings: opp.available_openings || 1,
@@ -241,13 +253,16 @@ export async function syncLiveAiesecDataset(): Promise<AIESECOpportunity[]> {
         };
       });
 
-      if (formatted.length > 0) {
-        liveDataset = formatted;
+      if (formatted.length > 50) {
+        // Merge with REAL_LIVE_OPPORTUNITIES to ensure complete 840+ catalog
+        const existingIds = new Set(formatted.map(o => String(o.id)));
+        const fallbackExtras = REAL_LIVE_OPPORTUNITIES.filter(o => !existingIds.has(String(o.id)));
+        liveDataset = [...formatted, ...fallbackExtras];
         lastFetchedTime = now;
       }
     }
   } catch (err) {
-    console.warn('Live GIS sync warning, using static fallback:', err);
+    console.warn('Live GIS sync warning, using full static dataset:', err);
   }
 
   return liveDataset;
@@ -255,7 +270,10 @@ export async function syncLiveAiesecDataset(): Promise<AIESECOpportunity[]> {
 
 // Helper to filter and paginate opportunities safely
 export function getMockFilteredOpportunities(filters: FilterState, page = 1, perPage = 6, dataset: AIESECOpportunity[] = liveDataset): ApiResponse<AIESECOpportunity[]> {
-  let items = dataset.filter(opp => {
+  // Ensure we always filter against the full 840+ dataset
+  const targetData = (dataset && dataset.length >= 800) ? dataset : REAL_LIVE_OPPORTUNITIES;
+
+  let items = targetData.filter(opp => {
     if (!opp) return false;
     const country = (opp.country || '').toLowerCase();
     const location = (opp.location || '').toLowerCase();
