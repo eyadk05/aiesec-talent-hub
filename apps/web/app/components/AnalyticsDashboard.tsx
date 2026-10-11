@@ -387,7 +387,7 @@ export default function AnalyticsDashboard({ opportunities }: AnalyticsDashboard
         <div className="card" style={{ padding: '1.5rem' }}>
           <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <Home size={18} style={{ color: 'var(--gte-green)' }} />
-            Logistics & Accommodation Support
+            Logistics &amp; Accommodation Support
           </h3>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
@@ -412,6 +412,8 @@ export default function AnalyticsDashboard({ opportunities }: AnalyticsDashboard
             </div>
           </div>
         </div>
+
+      </div>
 
       </div>
     </div>
