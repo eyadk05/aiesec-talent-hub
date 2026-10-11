@@ -46,21 +46,21 @@ export default function AnalyticsDashboard({ opportunities }: AnalyticsDashboard
 
   const sortedCountries = Object.entries(countryCounts).sort((a, b) => b[1] - a[1]);
 
-  // Breakdown by Skills
-  const skillCounts: Record<string, number> = {};
+  // Breakdown by Backgrounds Needed
+  const bgCounts: Record<string, number> = {};
   dataToAnalyze.forEach(o => {
-    if (Array.isArray(o.skills)) {
-      o.skills.forEach(s => {
-        if (s?.name && s.name !== 'Skill' && s.name !== 'Professional Expertise') {
-          skillCounts[s.name] = (skillCounts[s.name] || 0) + 1;
+    if (Array.isArray(o.backgrounds)) {
+      o.backgrounds.forEach(b => {
+        if (b?.name && b.name.trim()) {
+          bgCounts[b.name] = (bgCounts[b.name] || 0) + 1;
         }
       });
     }
   });
 
-  const sortedSkills = Object.entries(skillCounts)
+  const sortedBackgrounds = Object.entries(bgCounts)
     .sort((a, b) => b[1] - a[1])
-    .slice(0, 10);
+    .slice(0, 12);
 
   // Paid vs Unpaid ratio
   const paidCount = dataToAnalyze.filter(o => typeof o.salary === 'number' && o.salary > 0).length;
@@ -348,148 +348,130 @@ export default function AnalyticsDashboard({ opportunities }: AnalyticsDashboard
           </div>
         </div>
 
-        {/* Most In-Demand Skills */}
+        {/* Most Wanted Backgrounds */}
         <div className="card" style={{ padding: '1.5rem' }}>
           <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <Award size={18} style={{ color: 'var(--color-primary)' }} />
-            Top In-Demand Skills
+            Most Wanted Backgrounds
           </h3>
+          <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '1.25rem', marginTop: '-0.75rem' }}>
+            Academic &amp; professional fields most required across all opportunities
+          </p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '0.85rem' }}>
-            {sortedSkills.map(([skill, count], idx) => {
-              const maxCount = sortedSkills[0]?.[1] ?? 1;
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '0.85rem' }}>
+            {sortedBackgrounds.map(([bg, count], idx) => {
+              const maxCount = sortedBackgrounds[0]?.[1] ?? 1;
               const barWidth = Math.round((count / maxCount) * 100);
+              const pct = Math.round((count / total) * 100);
 
-              // Map skill name to a thematic emoji + gradient
-              const s = skill.toLowerCase();
-              let emoji = '⭐';
+              // Map background field to thematic emoji + gradient
+              const b = bg.toLowerCase();
+              let emoji = '🎓';
               let grad = 'linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%)';
-              let barColor = 'rgba(96,165,250,0.85)';
-              let pattern = 'radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)';
-              let patternSize = '20px 20px';
+              let barColor = 'rgba(96,165,250,0.9)';
 
-              if (s.includes('computer') || s.includes('software') || s.includes('programming') || s.includes('coding') || s.includes('developer') || s.includes('tech')) {
+              if (b.includes('computer') || b.includes('software') || b.includes('it') || b.includes('information tech') || b.includes('computing')) {
                 emoji = '💻'; grad = 'linear-gradient(135deg, #0f172a 0%, #1e40af 100%)'; barColor = 'rgba(96,165,250,0.9)';
-                pattern = 'repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 20px), repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 20px)';
-                patternSize = 'auto';
-              } else if (s.includes('teach') || s.includes('education') || s.includes('training') || s.includes('tutor') || s.includes('school') || s.includes('academic')) {
-                emoji = '📚'; grad = 'linear-gradient(135deg, #1a2e05 0%, #3f6212 100%)'; barColor = 'rgba(134,239,172,0.9)';
-                pattern = 'radial-gradient(circle, rgba(255,255,255,0.06) 2px, transparent 2px)'; patternSize = '24px 24px';
-              } else if (s.includes('market') || s.includes('sales') || s.includes('advertis') || s.includes('brand') || s.includes('digital')) {
+              } else if (b.includes('business') || b.includes('management') || b.includes('administration') || b.includes('mba')) {
+                emoji = '💼'; grad = 'linear-gradient(135deg, #422006 0%, #92400e 100%)'; barColor = 'rgba(251,191,36,0.9)';
+              } else if (b.includes('market') || b.includes('sales') || b.includes('advertis') || b.includes('brand') || b.includes('digital')) {
                 emoji = '📊'; grad = 'linear-gradient(135deg, #431407 0%, #c2410c 100%)'; barColor = 'rgba(251,146,60,0.9)';
-                pattern = 'repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 12px)';
-                patternSize = 'auto';
-              } else if (s.includes('leader') || s.includes('manag') || s.includes('execut') || s.includes('direct') || s.includes('strateg')) {
-                emoji = '🏆'; grad = 'linear-gradient(135deg, #422006 0%, #b45309 100%)'; barColor = 'rgba(252,211,77,0.9)';
-                pattern = 'radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)'; patternSize = '16px 16px';
-              } else if (s.includes('communicat') || s.includes('public speak') || s.includes('present') || s.includes('media')) {
-                emoji = '🎙️'; grad = 'linear-gradient(135deg, #2e1065 0%, #7e22ce 100%)'; barColor = 'rgba(216,180,254,0.9)';
-                pattern = 'radial-gradient(ellipse, rgba(255,255,255,0.07) 2px, transparent 2px)'; patternSize = '22px 18px';
-              } else if (s.includes('english') || s.includes('language') || s.includes('translat') || s.includes('linguist')) {
-                emoji = '🌐'; grad = 'linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%)'; barColor = 'rgba(56,189,248,0.9)';
-                pattern = 'radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)'; patternSize = '18px 18px';
-              } else if (s.includes('finance') || s.includes('account') || s.includes('banking') || s.includes('econom') || s.includes('invest')) {
+              } else if (b.includes('teach') || b.includes('education') || b.includes('pedagog') || b.includes('school') || b.includes('english teach')) {
+                emoji = '📚'; grad = 'linear-gradient(135deg, #1a2e05 0%, #3f6212 100%)'; barColor = 'rgba(134,239,172,0.9)';
+              } else if (b.includes('engineer') || b.includes('mechanic') || b.includes('electric') || b.includes('civil') || b.includes('architect')) {
+                emoji = '⚙️'; grad = 'linear-gradient(135deg, #1c1917 0%, #44403c 100%)'; barColor = 'rgba(214,211,209,0.9)';
+              } else if (b.includes('finance') || b.includes('account') || b.includes('banking') || b.includes('econom') || b.includes('invest')) {
                 emoji = '💹'; grad = 'linear-gradient(135deg, #052e16 0%, #15803d 100%)'; barColor = 'rgba(74,222,128,0.9)';
-                pattern = 'repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 16px)';
-                patternSize = 'auto';
-              } else if (s.includes('engineer') || s.includes('mechanic') || s.includes('electric') || s.includes('civil')) {
-                emoji = '⚙️'; grad = 'linear-gradient(135deg, #1c1917 0%, #57534e 100%)'; barColor = 'rgba(214,211,209,0.9)';
-                pattern = 'repeating-conic-gradient(rgba(255,255,255,0.04) 0% 25%, transparent 0% 50%) 0 0 / 16px 16px';
-                patternSize = 'auto';
-              } else if (s.includes('design') || s.includes('creative') || s.includes('art') || s.includes('graphic') || s.includes('ui') || s.includes('ux')) {
+              } else if (b.includes('language') || b.includes('english') || b.includes('translat') || b.includes('linguist') || b.includes('communicat')) {
+                emoji = '🌐'; grad = 'linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%)'; barColor = 'rgba(56,189,248,0.9)';
+              } else if (b.includes('design') || b.includes('creative') || b.includes('art') || b.includes('graphic') || b.includes('media') || b.includes('ux') || b.includes('ui')) {
                 emoji = '🎨'; grad = 'linear-gradient(135deg, #500724 0%, #be185d 100%)'; barColor = 'rgba(249,168,212,0.9)';
-                pattern = 'radial-gradient(circle, rgba(255,255,255,0.07) 2px, transparent 2px)'; patternSize = '20px 20px';
-              } else if (s.includes('data') || s.includes('analytic') || s.includes('research') || s.includes('statistic')) {
-                emoji = '🔬'; grad = 'linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)'; barColor = 'rgba(165,180,252,0.9)';
-                pattern = 'repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 18px)';
-                patternSize = 'auto';
-              } else if (s.includes('health') || s.includes('medic') || s.includes('nursing') || s.includes('public health')) {
+              } else if (b.includes('health') || b.includes('medic') || b.includes('nurs') || b.includes('public health') || b.includes('pharma') || b.includes('biology')) {
                 emoji = '🏥'; grad = 'linear-gradient(135deg, #042f2e 0%, #0d9488 100%)'; barColor = 'rgba(94,234,212,0.9)';
-                pattern = 'radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)'; patternSize = '14px 14px';
-              } else if (s.includes('entrepreneur') || s.includes('business') || s.includes('startup') || s.includes('innovation')) {
+              } else if (b.includes('law') || b.includes('legal') || b.includes('political') || b.includes('governance') || b.includes('diplomac')) {
+                emoji = '⚖️'; grad = 'linear-gradient(135deg, #1e1b4b 0%, #3730a3 100%)'; barColor = 'rgba(165,180,252,0.9)';
+              } else if (b.includes('data') || b.includes('analytic') || b.includes('statistic') || b.includes('research') || b.includes('science')) {
+                emoji = '🔬'; grad = 'linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)'; barColor = 'rgba(165,180,252,0.9)';
+              } else if (b.includes('social') || b.includes('psychol') || b.includes('anthropol') || b.includes('sociolog') || b.includes('humanitarian')) {
+                emoji = '🤝'; grad = 'linear-gradient(135deg, #134e4a 0%, #0d9488 100%)'; barColor = 'rgba(45,212,191,0.9)';
+              } else if (b.includes('entrepreneur') || b.includes('startup') || b.includes('innovation')) {
                 emoji = '🚀'; grad = 'linear-gradient(135deg, #0f172a 0%, #7c3aed 100%)'; barColor = 'rgba(167,139,250,0.9)';
-                pattern = 'radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)'; patternSize = '22px 22px';
+              } else if (b.includes('environment') || b.includes('sustainab') || b.includes('ecology') || b.includes('nature') || b.includes('climate')) {
+                emoji = '🌱'; grad = 'linear-gradient(135deg, #052e16 0%, #166534 100%)'; barColor = 'rgba(134,239,172,0.9)';
               } else {
-                // Fallback — cycle through defaults
                 const FALLBACKS = [
-                  { e: '🌍', g: 'linear-gradient(135deg, #0a2240 0%, #037EF3 100%)', b: 'rgba(96,165,250,0.9)' },
-                  { e: '✨', g: 'linear-gradient(135deg, #3b0764 0%, #9333ea 100%)', b: 'rgba(192,132,252,0.9)' },
-                  { e: '🤝', g: 'linear-gradient(135deg, #134e4a 0%, #0d9488 100%)', b: 'rgba(45,212,191,0.9)' },
+                  { e: '🌍', g: 'linear-gradient(135deg, #0a2240 0%, #037EF3 100%)', b2: 'rgba(96,165,250,0.9)' },
+                  { e: '✨', g: 'linear-gradient(135deg, #3b0764 0%, #9333ea 100%)', b2: 'rgba(192,132,252,0.9)' },
+                  { e: '📐', g: 'linear-gradient(135deg, #27272a 0%, #52525b 100%)', b2: 'rgba(212,212,216,0.9)' },
                 ];
                 const f = FALLBACKS[idx % FALLBACKS.length];
-                emoji = f.e; grad = f.g; barColor = f.b;
-                pattern = 'radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)'; patternSize = '20px 20px';
+                emoji = f.e; grad = f.g; barColor = f.b2;
               }
 
               return (
-                <div key={skill} style={{
+                <div key={bg} style={{
                   position: 'relative',
                   overflow: 'hidden',
                   borderRadius: 'var(--radius-md)',
                   background: grad,
-                  padding: '1rem 1.1rem 0.9rem',
+                  padding: '1rem 1.1rem 0.85rem',
                   cursor: 'default',
-                  minHeight: '90px',
+                  minHeight: '88px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
                 }}>
-                  {/* Pattern overlay */}
+                  {/* Dot pattern overlay */}
                   <div style={{
                     position: 'absolute', inset: 0, pointerEvents: 'none',
-                    backgroundImage: pattern,
-                    backgroundSize: patternSize,
+                    backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)',
+                    backgroundSize: '20px 20px',
                   }} />
 
                   {/* Big emoji watermark */}
                   <div style={{
-                    position: 'absolute',
-                    right: '-8px', bottom: '-10px',
-                    fontSize: '4.5rem',
-                    opacity: 0.18,
-                    lineHeight: 1,
-                    pointerEvents: 'none',
-                    userSelect: 'none',
+                    position: 'absolute', right: '-6px', bottom: '-8px',
+                    fontSize: '4.2rem', opacity: 0.2, lineHeight: 1,
+                    pointerEvents: 'none', userSelect: 'none',
                   }}>
                     {emoji}
                   </div>
 
                   {/* Content */}
                   <div style={{ position: 'relative', zIndex: 1 }}>
-                    {/* Top row: rank + name */}
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.55rem', marginBottom: '0.55rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                      {/* Rank */}
                       <span style={{
-                        flexShrink: 0,
-                        width: '20px', height: '20px',
-                        borderRadius: '50%',
-                        backgroundColor: 'rgba(255,255,255,0.18)',
+                        flexShrink: 0, width: '20px', height: '20px', borderRadius: '50%',
+                        backgroundColor: 'rgba(255,255,255,0.2)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        fontSize: '0.65rem', fontWeight: 900, color: '#fff',
-                        marginTop: '1px',
+                        fontSize: '0.65rem', fontWeight: 900, color: '#fff', marginTop: '1px',
                       }}>
                         {idx + 1}
                       </span>
-                      <span style={{
-                        fontWeight: 700, fontSize: '0.9rem', color: '#ffffff',
-                        lineHeight: 1.3, flex: 1,
-                      }}>
-                        {skill}
+                      {/* Background name */}
+                      <span style={{ fontWeight: 700, fontSize: '0.88rem', color: '#fff', lineHeight: 1.3, flex: 1 }}>
+                        {bg}
                       </span>
+                      {/* Count pill */}
                       <span style={{
-                        flexShrink: 0,
-                        fontSize: '0.75rem', fontWeight: 800,
+                        flexShrink: 0, fontSize: '0.73rem', fontWeight: 800,
                         color: 'rgba(255,255,255,0.95)',
                         backgroundColor: 'rgba(255,255,255,0.18)',
-                        padding: '0.1rem 0.5rem',
-                        borderRadius: '9999px',
+                        padding: '0.1rem 0.5rem', borderRadius: '9999px',
                       }}>
-                        {count}
+                        {count} opps
                       </span>
                     </div>
 
                     {/* Progress bar */}
                     <div style={{ height: '4px', width: '100%', borderRadius: '9999px', backgroundColor: 'rgba(255,255,255,0.15)' }}>
                       <div style={{ height: '100%', width: `${barWidth}%`, borderRadius: '9999px', backgroundColor: barColor, transition: 'width 0.7s ease' }} />
+                    </div>
+
+                    {/* Percentage label */}
+                    <div style={{ marginTop: '0.3rem', fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)', textAlign: 'right' }}>
+                      {pct}% of all opportunities
                     </div>
                   </div>
                 </div>
