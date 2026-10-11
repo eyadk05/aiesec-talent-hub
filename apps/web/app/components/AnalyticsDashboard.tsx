@@ -75,18 +75,105 @@ export default function AnalyticsDashboard({ opportunities }: AnalyticsDashboard
   const foodPercent = Math.round((foodCount / total) * 100);
 
   return (
-    <div style={{ maxWidth: '1280px', margin: '2rem auto', padding: '0 1.5rem' }} className="animate-fade-in">
-      
-      {/* Title Banner */}
-      <div style={{ marginBottom: '2rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'var(--color-primary)', fontWeight: 700, fontSize: '0.9rem', marginBottom: '0.25rem' }}>
-          <TrendingUp size={18} /> Global Market Analytics
+    <div className="animate-fade-in">
+
+      {/* ── Hero Background Banner ── */}
+      <div style={{
+        position: 'relative',
+        overflow: 'hidden',
+        background: 'linear-gradient(135deg, #0a1628 0%, #0d1f3c 40%, #0a2240 70%, #071828 100%)',
+        borderBottom: '1px solid var(--border-color)',
+        paddingBottom: '3rem',
+        marginBottom: '0',
+      }}>
+
+        {/* Decorative radial glow center */}
+        <div style={{
+          position: 'absolute', inset: 0, pointerEvents: 'none',
+          background: 'radial-gradient(ellipse 70% 60% at 50% 20%, rgba(3,126,243,0.18) 0%, transparent 70%)',
+        }} />
+
+        {/* Decorative blob top-right */}
+        <div style={{
+          position: 'absolute', top: '-60px', right: '-60px', width: '340px', height: '340px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(0,193,110,0.13) 0%, transparent 70%)',
+          pointerEvents: 'none',
+        }} />
+
+        {/* Decorative blob bottom-left */}
+        <div style={{
+          position: 'absolute', bottom: '-80px', left: '-40px', width: '280px', height: '280px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(3,126,243,0.14) 0%, transparent 70%)',
+          pointerEvents: 'none',
+        }} />
+
+        {/* Grid dot pattern overlay */}
+        <div style={{
+          position: 'absolute', inset: 0, pointerEvents: 'none', opacity: 0.04,
+          backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)',
+          backgroundSize: '28px 28px',
+        }} />
+
+        {/* Hero text content */}
+        <div style={{ position: 'relative', zIndex: 1, maxWidth: '1280px', margin: '0 auto', padding: '3rem 1.5rem 1.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#60a5fa', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.75rem', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+            <TrendingUp size={16} /> Global Market Analytics
+          </div>
+          <h2 style={{
+            fontSize: 'clamp(1.6rem, 3vw, 2.4rem)',
+            fontWeight: 900,
+            color: '#ffffff',
+            marginBottom: '0.6rem',
+            letterSpacing: '-0.03em',
+            lineHeight: 1.15,
+          }}>
+            AIESEC Opportunities
+            <span style={{
+              display: 'block',
+              background: 'linear-gradient(90deg, #60a5fa, #34d399)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}>
+              Global Intelligence
+            </span>
+          </h2>
+          <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.55)', maxWidth: '560px', lineHeight: 1.7 }}>
+            Real-time analytics across <strong style={{ color: 'rgba(255,255,255,0.85)' }}>{total}</strong> active Global Talent &amp; Global Teacher postings — updated live from the AIESEC network.
+          </p>
+
+          {/* Quick stat pills */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '1.75rem' }}>
+            {[
+              { label: 'Total Opportunities', value: total, color: '#60a5fa' },
+              { label: 'Global Talent (GTa)', value: gtaCount, color: '#60a5fa' },
+              { label: 'Global Teacher (GTe)', value: gteCount, color: '#34d399' },
+              { label: 'Paid / Salaried', value: paidCount, color: '#a78bfa' },
+              { label: 'With Accommodation', value: accCount, color: '#fb923c' },
+            ].map(stat => (
+              <div key={stat.label} style={{
+                padding: '0.5rem 1rem',
+                borderRadius: '9999px',
+                backgroundColor: 'rgba(255,255,255,0.07)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                backdropFilter: 'blur(8px)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                fontSize: '0.82rem',
+              }}>
+                <span style={{ fontWeight: 800, fontSize: '1rem', color: stat.color }}>{stat.value}</span>
+                <span style={{ color: 'rgba(255,255,255,0.55)' }}>{stat.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <h2 style={{ fontSize: '1.75rem', fontWeight: 800 }}>AIESEC Global Opportunities Intelligence</h2>
-        <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>
-          Analytics generated across all <strong>{total}</strong> active, real-time Global Talent & Global Teacher postings worldwide.
-        </p>
       </div>
+
+      {/* ── Main Chart Grid ── */}
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '2rem 1.5rem' }}>
 
       {/* Summary KPI Cards */}
       <div style={{
