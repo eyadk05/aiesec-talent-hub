@@ -350,36 +350,97 @@ export default function AnalyticsDashboard({ opportunities }: AnalyticsDashboard
 
         {/* Most In-Demand Skills */}
         <div className="card" style={{ padding: '1.5rem' }}>
-          <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <Award size={18} style={{ color: 'var(--color-primary)' }} />
             Top In-Demand Skills
           </h3>
 
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
-            {sortedSkills.map(([skill, count]) => (
-              <div key={skill} style={{
-                padding: '0.45rem 0.85rem',
-                borderRadius: 'var(--radius-lg)',
-                backgroundColor: 'var(--bg-subtle)',
-                border: '1px solid var(--border-color)',
-                fontSize: '0.85rem',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem'
-              }}>
-                <span style={{ fontWeight: 600 }}>{skill}</span>
-                <span style={{
-                  fontSize: '0.75rem',
-                  fontWeight: 700,
-                  padding: '0.1rem 0.45rem',
-                  borderRadius: 'var(--radius-full)',
-                  backgroundColor: 'var(--color-primary-light)',
-                  color: 'var(--color-primary)'
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+            {sortedSkills.map(([skill, count], idx) => {
+              const maxCount = sortedSkills[0]?.[1] ?? 1;
+              const barWidth = Math.round((count / maxCount) * 100);
+              const GRADIENTS = [
+                'linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%)',
+                'linear-gradient(135deg, #064e3b 0%, #059669 100%)',
+                'linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%)',
+                'linear-gradient(135deg, #7c2d12 0%, #ea580c 100%)',
+                'linear-gradient(135deg, #831843 0%, #db2777 100%)',
+                'linear-gradient(135deg, #134e4a 0%, #0d9488 100%)',
+                'linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)',
+                'linear-gradient(135deg, #713f12 0%, #ca8a04 100%)',
+                'linear-gradient(135deg, #0c4a6e 0%, #0284c7 100%)',
+                'linear-gradient(135deg, #3b0764 0%, #9333ea 100%)',
+              ];
+              const BAR_COLORS = [
+                'rgba(96,165,250,0.9)',
+                'rgba(52,211,153,0.9)',
+                'rgba(167,139,250,0.9)',
+                'rgba(251,146,60,0.9)',
+                'rgba(244,114,182,0.9)',
+                'rgba(45,212,191,0.9)',
+                'rgba(129,140,248,0.9)',
+                'rgba(250,204,21,0.9)',
+                'rgba(56,189,248,0.9)',
+                'rgba(192,132,252,0.9)',
+              ];
+              const grad = GRADIENTS[idx % GRADIENTS.length];
+              const barColor = BAR_COLORS[idx % BAR_COLORS.length];
+              return (
+                <div key={skill} style={{
+                  position: 'relative',
+                  overflow: 'hidden',
+                  borderRadius: 'var(--radius-md)',
+                  background: grad,
+                  padding: '0.75rem 1rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.75rem',
+                  cursor: 'default',
                 }}>
-                  {count}
-                </span>
-              </div>
-            ))}
+                  {/* Rank badge */}
+                  <span style={{
+                    flexShrink: 0,
+                    width: '24px',
+                    height: '24px',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(255,255,255,0.15)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '0.7rem',
+                    fontWeight: 800,
+                    color: '#fff',
+                  }}>
+                    {idx + 1}
+                  </span>
+
+                  {/* Skill name + bar */}
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.3rem' }}>
+                      <span style={{ fontWeight: 700, fontSize: '0.88rem', color: '#ffffff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                        {skill}
+                      </span>
+                      <span style={{
+                        flexShrink: 0,
+                        marginLeft: '0.5rem',
+                        fontSize: '0.78rem',
+                        fontWeight: 800,
+                        color: 'rgba(255,255,255,0.9)',
+                        backgroundColor: 'rgba(255,255,255,0.15)',
+                        padding: '0.1rem 0.45rem',
+                        borderRadius: 'var(--radius-full)',
+                      }}>
+                        {count}
+                      </span>
+                    </div>
+                    {/* Progress bar */}
+                    <div style={{ height: '5px', width: '100%', borderRadius: '9999px', backgroundColor: 'rgba(255,255,255,0.15)' }}>
+                      <div style={{ height: '100%', width: `${barWidth}%`, borderRadius: '9999px', backgroundColor: barColor, transition: 'width 0.6s ease' }} />
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
