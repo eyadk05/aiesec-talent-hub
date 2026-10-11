@@ -355,87 +355,141 @@ export default function AnalyticsDashboard({ opportunities }: AnalyticsDashboard
             Top In-Demand Skills
           </h3>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '0.85rem' }}>
             {sortedSkills.map(([skill, count], idx) => {
               const maxCount = sortedSkills[0]?.[1] ?? 1;
               const barWidth = Math.round((count / maxCount) * 100);
-              const GRADIENTS = [
-                'linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%)',
-                'linear-gradient(135deg, #064e3b 0%, #059669 100%)',
-                'linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%)',
-                'linear-gradient(135deg, #7c2d12 0%, #ea580c 100%)',
-                'linear-gradient(135deg, #831843 0%, #db2777 100%)',
-                'linear-gradient(135deg, #134e4a 0%, #0d9488 100%)',
-                'linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)',
-                'linear-gradient(135deg, #713f12 0%, #ca8a04 100%)',
-                'linear-gradient(135deg, #0c4a6e 0%, #0284c7 100%)',
-                'linear-gradient(135deg, #3b0764 0%, #9333ea 100%)',
-              ];
-              const BAR_COLORS = [
-                'rgba(96,165,250,0.9)',
-                'rgba(52,211,153,0.9)',
-                'rgba(167,139,250,0.9)',
-                'rgba(251,146,60,0.9)',
-                'rgba(244,114,182,0.9)',
-                'rgba(45,212,191,0.9)',
-                'rgba(129,140,248,0.9)',
-                'rgba(250,204,21,0.9)',
-                'rgba(56,189,248,0.9)',
-                'rgba(192,132,252,0.9)',
-              ];
-              const grad = GRADIENTS[idx % GRADIENTS.length];
-              const barColor = BAR_COLORS[idx % BAR_COLORS.length];
+
+              // Map skill name to a thematic emoji + gradient
+              const s = skill.toLowerCase();
+              let emoji = '⭐';
+              let grad = 'linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%)';
+              let barColor = 'rgba(96,165,250,0.85)';
+              let pattern = 'radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)';
+              let patternSize = '20px 20px';
+
+              if (s.includes('computer') || s.includes('software') || s.includes('programming') || s.includes('coding') || s.includes('developer') || s.includes('tech')) {
+                emoji = '💻'; grad = 'linear-gradient(135deg, #0f172a 0%, #1e40af 100%)'; barColor = 'rgba(96,165,250,0.9)';
+                pattern = 'repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 20px), repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 20px)';
+                patternSize = 'auto';
+              } else if (s.includes('teach') || s.includes('education') || s.includes('training') || s.includes('tutor') || s.includes('school') || s.includes('academic')) {
+                emoji = '📚'; grad = 'linear-gradient(135deg, #1a2e05 0%, #3f6212 100%)'; barColor = 'rgba(134,239,172,0.9)';
+                pattern = 'radial-gradient(circle, rgba(255,255,255,0.06) 2px, transparent 2px)'; patternSize = '24px 24px';
+              } else if (s.includes('market') || s.includes('sales') || s.includes('advertis') || s.includes('brand') || s.includes('digital')) {
+                emoji = '📊'; grad = 'linear-gradient(135deg, #431407 0%, #c2410c 100%)'; barColor = 'rgba(251,146,60,0.9)';
+                pattern = 'repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 12px)';
+                patternSize = 'auto';
+              } else if (s.includes('leader') || s.includes('manag') || s.includes('execut') || s.includes('direct') || s.includes('strateg')) {
+                emoji = '🏆'; grad = 'linear-gradient(135deg, #422006 0%, #b45309 100%)'; barColor = 'rgba(252,211,77,0.9)';
+                pattern = 'radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)'; patternSize = '16px 16px';
+              } else if (s.includes('communicat') || s.includes('public speak') || s.includes('present') || s.includes('media')) {
+                emoji = '🎙️'; grad = 'linear-gradient(135deg, #2e1065 0%, #7e22ce 100%)'; barColor = 'rgba(216,180,254,0.9)';
+                pattern = 'radial-gradient(ellipse, rgba(255,255,255,0.07) 2px, transparent 2px)'; patternSize = '22px 18px';
+              } else if (s.includes('english') || s.includes('language') || s.includes('translat') || s.includes('linguist')) {
+                emoji = '🌐'; grad = 'linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%)'; barColor = 'rgba(56,189,248,0.9)';
+                pattern = 'radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)'; patternSize = '18px 18px';
+              } else if (s.includes('finance') || s.includes('account') || s.includes('banking') || s.includes('econom') || s.includes('invest')) {
+                emoji = '💹'; grad = 'linear-gradient(135deg, #052e16 0%, #15803d 100%)'; barColor = 'rgba(74,222,128,0.9)';
+                pattern = 'repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 16px)';
+                patternSize = 'auto';
+              } else if (s.includes('engineer') || s.includes('mechanic') || s.includes('electric') || s.includes('civil')) {
+                emoji = '⚙️'; grad = 'linear-gradient(135deg, #1c1917 0%, #57534e 100%)'; barColor = 'rgba(214,211,209,0.9)';
+                pattern = 'repeating-conic-gradient(rgba(255,255,255,0.04) 0% 25%, transparent 0% 50%) 0 0 / 16px 16px';
+                patternSize = 'auto';
+              } else if (s.includes('design') || s.includes('creative') || s.includes('art') || s.includes('graphic') || s.includes('ui') || s.includes('ux')) {
+                emoji = '🎨'; grad = 'linear-gradient(135deg, #500724 0%, #be185d 100%)'; barColor = 'rgba(249,168,212,0.9)';
+                pattern = 'radial-gradient(circle, rgba(255,255,255,0.07) 2px, transparent 2px)'; patternSize = '20px 20px';
+              } else if (s.includes('data') || s.includes('analytic') || s.includes('research') || s.includes('statistic')) {
+                emoji = '🔬'; grad = 'linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)'; barColor = 'rgba(165,180,252,0.9)';
+                pattern = 'repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 18px)';
+                patternSize = 'auto';
+              } else if (s.includes('health') || s.includes('medic') || s.includes('nursing') || s.includes('public health')) {
+                emoji = '🏥'; grad = 'linear-gradient(135deg, #042f2e 0%, #0d9488 100%)'; barColor = 'rgba(94,234,212,0.9)';
+                pattern = 'radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)'; patternSize = '14px 14px';
+              } else if (s.includes('entrepreneur') || s.includes('business') || s.includes('startup') || s.includes('innovation')) {
+                emoji = '🚀'; grad = 'linear-gradient(135deg, #0f172a 0%, #7c3aed 100%)'; barColor = 'rgba(167,139,250,0.9)';
+                pattern = 'radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)'; patternSize = '22px 22px';
+              } else {
+                // Fallback — cycle through defaults
+                const FALLBACKS = [
+                  { e: '🌍', g: 'linear-gradient(135deg, #0a2240 0%, #037EF3 100%)', b: 'rgba(96,165,250,0.9)' },
+                  { e: '✨', g: 'linear-gradient(135deg, #3b0764 0%, #9333ea 100%)', b: 'rgba(192,132,252,0.9)' },
+                  { e: '🤝', g: 'linear-gradient(135deg, #134e4a 0%, #0d9488 100%)', b: 'rgba(45,212,191,0.9)' },
+                ];
+                const f = FALLBACKS[idx % FALLBACKS.length];
+                emoji = f.e; grad = f.g; barColor = f.b;
+                pattern = 'radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)'; patternSize = '20px 20px';
+              }
+
               return (
                 <div key={skill} style={{
                   position: 'relative',
                   overflow: 'hidden',
                   borderRadius: 'var(--radius-md)',
                   background: grad,
-                  padding: '0.75rem 1rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.75rem',
+                  padding: '1rem 1.1rem 0.9rem',
                   cursor: 'default',
+                  minHeight: '90px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
                 }}>
-                  {/* Rank badge */}
-                  <span style={{
-                    flexShrink: 0,
-                    width: '24px',
-                    height: '24px',
-                    borderRadius: '50%',
-                    backgroundColor: 'rgba(255,255,255,0.15)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '0.7rem',
-                    fontWeight: 800,
-                    color: '#fff',
-                  }}>
-                    {idx + 1}
-                  </span>
+                  {/* Pattern overlay */}
+                  <div style={{
+                    position: 'absolute', inset: 0, pointerEvents: 'none',
+                    backgroundImage: pattern,
+                    backgroundSize: patternSize,
+                  }} />
 
-                  {/* Skill name + bar */}
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.3rem' }}>
-                      <span style={{ fontWeight: 700, fontSize: '0.88rem', color: '#ffffff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                  {/* Big emoji watermark */}
+                  <div style={{
+                    position: 'absolute',
+                    right: '-8px', bottom: '-10px',
+                    fontSize: '4.5rem',
+                    opacity: 0.18,
+                    lineHeight: 1,
+                    pointerEvents: 'none',
+                    userSelect: 'none',
+                  }}>
+                    {emoji}
+                  </div>
+
+                  {/* Content */}
+                  <div style={{ position: 'relative', zIndex: 1 }}>
+                    {/* Top row: rank + name */}
+                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.55rem', marginBottom: '0.55rem' }}>
+                      <span style={{
+                        flexShrink: 0,
+                        width: '20px', height: '20px',
+                        borderRadius: '50%',
+                        backgroundColor: 'rgba(255,255,255,0.18)',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        fontSize: '0.65rem', fontWeight: 900, color: '#fff',
+                        marginTop: '1px',
+                      }}>
+                        {idx + 1}
+                      </span>
+                      <span style={{
+                        fontWeight: 700, fontSize: '0.9rem', color: '#ffffff',
+                        lineHeight: 1.3, flex: 1,
+                      }}>
                         {skill}
                       </span>
                       <span style={{
                         flexShrink: 0,
-                        marginLeft: '0.5rem',
-                        fontSize: '0.78rem',
-                        fontWeight: 800,
-                        color: 'rgba(255,255,255,0.9)',
-                        backgroundColor: 'rgba(255,255,255,0.15)',
-                        padding: '0.1rem 0.45rem',
-                        borderRadius: 'var(--radius-full)',
+                        fontSize: '0.75rem', fontWeight: 800,
+                        color: 'rgba(255,255,255,0.95)',
+                        backgroundColor: 'rgba(255,255,255,0.18)',
+                        padding: '0.1rem 0.5rem',
+                        borderRadius: '9999px',
                       }}>
                         {count}
                       </span>
                     </div>
+
                     {/* Progress bar */}
-                    <div style={{ height: '5px', width: '100%', borderRadius: '9999px', backgroundColor: 'rgba(255,255,255,0.15)' }}>
-                      <div style={{ height: '100%', width: `${barWidth}%`, borderRadius: '9999px', backgroundColor: barColor, transition: 'width 0.6s ease' }} />
+                    <div style={{ height: '4px', width: '100%', borderRadius: '9999px', backgroundColor: 'rgba(255,255,255,0.15)' }}>
+                      <div style={{ height: '100%', width: `${barWidth}%`, borderRadius: '9999px', backgroundColor: barColor, transition: 'width 0.7s ease' }} />
                     </div>
                   </div>
                 </div>
